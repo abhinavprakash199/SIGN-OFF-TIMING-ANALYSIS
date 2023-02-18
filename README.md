@@ -9,6 +9,8 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
     + [STA Defination](#STA-Defination)
     + [Timing Paths](#Timing-Paths)
     + [Setup & Hold Checks](#Setup-&-Hold-Checks)
+    + [Slack Calculation](#Slack-Calculation)
+    + [SDC File](#SDC-File)
     
 * [Appendix](#Appendix)
 * [References](#references)
@@ -61,16 +63,13 @@ Slack = Data Requierd Time - Data Arrival Time
 ```
 
 #### Data Arrival Time 
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/120498080/219847626-790136dd-0486-44b3-b924-8d6e30f6f2b3.png">
+![Screenshot (2402)](https://user-images.githubusercontent.com/120498080/219848964-cef2685a-3754-4076-b282-ab3ba525c545.png)
     
 #### Data Requierd Time 
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/120498080/219847653-139844fe-c626-4ff2-a30e-8d784cdfb36c.png">
+![Screenshot (2407)](https://user-images.githubusercontent.com/120498080/219848972-360c631a-ab9f-4d82-9176-b035e8da5b64.png)
 
 #### Slack
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/120498080/219847660-dcf60d68-4815-42e2-b27b-c49cbe408e61.png">
+![Screenshot (2404)](https://user-images.githubusercontent.com/120498080/219848973-e921d07f-542d-4b49-bd3b-24619f7aef8b.png)
 
 ### SDC File
 - A standard file format, Synopsys Design Constraint (SDC), is used to specify timing and other design constraints. The constraints are specified as tcl commands.
