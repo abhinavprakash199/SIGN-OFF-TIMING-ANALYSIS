@@ -63,9 +63,11 @@ Slack = Data Requierd Time - Data Arrival Time
 #### Data Arrival Time 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/120498080/219847626-790136dd-0486-44b3-b924-8d6e30f6f2b3.png">
+    
 #### Data Requierd Time 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/120498080/219847653-139844fe-c626-4ff2-a30e-8d784cdfb36c.png">
+
 #### Slack
 <p align="center">
     <img src="https://user-images.githubusercontent.com/120498080/219847660-dcf60d68-4815-42e2-b27b-c49cbe408e61.png">
