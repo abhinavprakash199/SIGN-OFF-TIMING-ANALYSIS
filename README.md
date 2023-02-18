@@ -56,11 +56,11 @@ Slack = Data Requierd Time - Data Arrival Time
 ```
 
 #### Data Arrival Time 
-![Screenshot (2402)](https://user-images.githubusercontent.com/120498080/219847048-f1cba149-cfb6-4ff6-9f41-822f2660f7d2.png)
+![Screenshot (2402)](https://user-images.githubusercontent.com/120498080/219847626-790136dd-0486-44b3-b924-8d6e30f6f2b3.png)
 #### Data Requierd Time 
-![Screenshot (2407)](https://user-images.githubusercontent.com/120498080/219847062-1aada45a-d5a5-4c0a-a8d8-431702be54f9.png)
+![Screenshot (2407)](https://user-images.githubusercontent.com/120498080/219847653-139844fe-c626-4ff2-a30e-8d784cdfb36c.png)
 #### Slack
-![Screenshot (2404)](https://user-images.githubusercontent.com/120498080/219847410-fcce02c6-9686-4e8c-ada0-b5d0acf69e72.png)
+![Screenshot (2404)](https://user-images.githubusercontent.com/120498080/219847660-dcf60d68-4815-42e2-b27b-c49cbe408e61.png)
 
 
 ## Appendix
