@@ -18,7 +18,7 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
 ---
 ### STA Defination
 Static timing analysis (STA) is a method of validating the timing performance of a design by checking all possible paths for timing violations. STA breaks a design down into timing paths, calculates the signal propagation delay along each path, and checks for violations of timing constraints inside the design and at the input/output interface.
-![Screenshot (2396)](https://user-images.githubusercontent.com/120498080/219844063-4006e064-51f4-4425-ba65-e2c9842578b8.png)
+![Screenshot (2396)](https://user-images.githubusercontent.com/120498080/219847750-36e15d0e-38ff-42e0-a105-7b4234270d7b.png)
 
 #### Inputs to an STA 
 - Gate level netlist which has a design representation
@@ -30,18 +30,20 @@ When performing timing analysis, STA first breaks down the design into smaller p
 STA breaks the path at 
 - Ports 
 - Sequential Elements
-![Screenshot (2397)](https://user-images.githubusercontent.com/120498080/219843999-a4e6ad2a-e673-4d51-9ec3-b143904eb35a.png)
 
+![Screenshot (2397)](https://user-images.githubusercontent.com/120498080/219847761-3572ebee-a802-4e65-bcce-ea63ed887ce7.png)
 
 Each timing path consists of the following elements:
 
 - **Startpoint** - The start of a timing path where data is launched by a clock edge or where the data must be available at a specific time. Every startpoint must be either an input port or a register clock pin.
 - **Combinational logic network** - Elements that have no memory or internal state. Combinational logic can contain AND, OR, XOR, and inverter elements, but cannot contain flip-flops, latches, registers, or RAM.
 - **Endpoint** - The end of a timing path where data is captured by a clock edge or where the data must be available at a specific time. Every endpoint must be either a register data input pin or an output port.
-![Screenshot (2399)](https://user-images.githubusercontent.com/120498080/219844485-17755126-109f-413f-8c49-58c4b587bd9b.png)
+
+![Screenshot (2399)](https://user-images.githubusercontent.com/120498080/219847775-09ca2042-0b46-4c1f-b6ff-918e7fb9a7b2.png)
 
 A combinational logic cloud might contain multiple paths, as shown in the following figure. STA uses the longest path to calculate a maximum delay and the shortest path to calculate a minimum delay.
-![Screenshot (2400)](https://user-images.githubusercontent.com/120498080/219844793-66a62bf4-9dd2-437a-893a-a80b8b9f6016.png)
+
+![Screenshot (2400)](https://user-images.githubusercontent.com/120498080/219847787-7cf1cadd-e262-48d2-a757-90ff3075a1f7.png)
 
 ### Setup & Hold Checks
 - A **setup check** specifies how much time is necessary for data to be available at the input of a sequential device before the clock edge that captures the data in the device. This check enforces a **maximum delay** on the data path relative to the clock edge. 
