@@ -72,6 +72,31 @@ Slack = Data Requierd Time - Data Arrival Time
 <p align="center">
     <img src="https://user-images.githubusercontent.com/120498080/219847660-dcf60d68-4815-42e2-b27b-c49cbe408e61.png">
 
+### SDC File
+- A standard file format, Synopsys Design Constraint (SDC), is used to specify timing and other design constraints. The constraints are specified as tcl commands.
+- SDC commands are the set of commands which are provided as an input to STA Tool to do timing analysis
+- It contain several constrains specifications like 
+#### Contraints for Timing
+![Screenshot (2408)](https://user-images.githubusercontent.com/120498080/219848815-6d82d719-e80a-4aa5-9c4c-fdc133559229.png)
+
+#### Contraints for Area and Power
+![Screenshot (2414)](https://user-images.githubusercontent.com/120498080/219848828-80de1fbf-7999-46af-986e-09e839d67b35.png)
+
+#### Contraints for Design Rule
+![Screenshot (2410)](https://user-images.githubusercontent.com/120498080/219848854-a4d123a6-210f-4fc0-86e7-2154d6144239.png)
+
+#### Contraints for Interfaces
+![Screenshot (2412)](https://user-images.githubusercontent.com/120498080/219848899-6518b29f-9f24-41d5-8793-ac30e6aa9dca.png)
+
+#### Contraints for Modes
+![Screenshot (2411)](https://user-images.githubusercontent.com/120498080/219848917-4902e780-0971-479d-8d51-48988bd3bda9.png)
+
+#### Exceptions to Design Contraints
+![Screenshot (2413)](https://user-images.githubusercontent.com/120498080/219848938-486e53a9-51ab-465c-b6bd-d47f1200c704.png)
+
+
+    
+ 
 
 ## Appendix
 ---
