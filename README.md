@@ -11,6 +11,7 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
     + [Setup & Hold Checks](#Setup-&-Hold-Checks)
     + [Slack Calculation](#Slack-Calculation)
     + [SDC File](#SDC-File)
+    + [Clock](#Clock)
     
 * [Appendix](#Appendix)
 * [References](#references)
@@ -101,12 +102,26 @@ We can define a **clock** signal as the one which synchronizes the state transit
 ![Screenshot (2420)](https://user-images.githubusercontent.com/120498080/219851373-b29851f1-e365-43f1-9d4c-d77511f935e3.png)
 ![Screenshot (2421)](https://user-images.githubusercontent.com/120498080/219851483-160a5832-ad29-49f1-877f-916f329a8d1e.png)
 
-**Generated Clocks** aare the clocks which are created inside the design which is a divided or multimplied version of a parrent clock 
+**Generated Clocks** are the clocks which are created inside the design which is a divided or multimplied version of a parrent clock 
 #### Command to create generated clock
 ![Screenshot (2423)](https://user-images.githubusercontent.com/120498080/219852273-062713a2-a9fb-4845-974b-8740a1703c68.png)
 ![Screenshot (2425)](https://user-images.githubusercontent.com/120498080/219852280-b26269fa-b311-49d2-8025-9739beeaee89.png)
 ![Screenshot (2426)](https://user-images.githubusercontent.com/120498080/219852607-92a789b4-5bca-4c99-b088-b8ec7c144b7e.png)
 ![Screenshot (2427)](https://user-images.githubusercontent.com/120498080/219853000-51a156eb-7a3f-4979-b345-95d1772b8fe9.png)
+    
+
+### Port Delays and Boundary Constrains
+- Port Delays can be specified by the following command
+```
+   set_input_delay
+   set_output delay
+```
+    
+- Set Boundary Constrains
+![Screenshot (2429)](https://user-images.githubusercontent.com/120498080/219943784-a2828d2b-5d5d-41d6-bb80-f1bfeecd6e96.png)
+![Screenshot (2430)](https://user-images.githubusercontent.com/120498080/219943792-7df05523-9188-449f-bcb1-067eadf4f34f.png)
+![Screenshot (2431)](https://user-images.githubusercontent.com/120498080/219943801-bd0b93e3-4dd2-4223-af7e-50103e848899.png)
+
 
   
  
