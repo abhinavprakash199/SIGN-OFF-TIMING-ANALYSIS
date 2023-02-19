@@ -192,6 +192,10 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
     sta run.tcl -exit | tee run.log
 ```
     
+#### Output of run OpenSTA
+![image](https://user-images.githubusercontent.com/120498080/219946164-6859b94d-1138-4dc8-9e54-6b5515855da0.png)
+![image](https://user-images.githubusercontent.com/120498080/219946136-f627ba62-19f7-4d1c-b098-56648db7c89b.png)
+
     
     
     
