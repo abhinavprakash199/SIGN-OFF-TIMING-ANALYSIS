@@ -15,7 +15,7 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
     + [Clock](#Clock)
     + [Port Delays and Boundary Constrains](#Port-Delays-and-Boundary-Constrains)
     + [Lab 1 OpenSTA](#Lab-1-OpenSTA)
-* [Day 2]()#day-2)
+* [Day 2](#day-2)
     
 * [Appendix](#Appendix)
 * [References](#references)
