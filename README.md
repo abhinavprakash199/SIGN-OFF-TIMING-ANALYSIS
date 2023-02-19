@@ -1,4 +1,5 @@
 # SIGN-OFF-TIMING-ANALYSIS
+
 This repository contains the whole summary of hands on done by Abhinav Prakash (IS22MTECH14002) during the workshop SIGN-OFF-TIMING-ANALYSIS-using-OpenLane-SKY130 organised by VSD. The full STA flow was implemented using OpenLANE with SKY130nm PDK.
 
 <p align="center">
@@ -13,6 +14,8 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
     + [SDC File](#SDC-File)
     + [Clock](#Clock)
     + [Port Delays and Boundary Constrains](#Port-Delays-and-Boundary-Constrains)
+    + [Lab 1 OpenSTA](#Lab-1-OpenSTA)
+* [Day 2]()#day-2)
     
 * [Appendix](#Appendix)
 * [References](#references)
@@ -126,12 +129,12 @@ We can define a **clock** signal as the one which synchronizes the state transit
 ![Screenshot (2431)](https://user-images.githubusercontent.com/120498080/219943801-bd0b93e3-4dd2-4223-af7e-50103e848899.png)
 
 
-### Lab 1
+### Lab 1 OpenSTA
 First download the working folder
 ```
 git clone https://github.com/vikkisachdeva/openSTA_sta_workshop    
 ```    
-#### OpenSTA
+### OpenSTA
 OpenSTA is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats.
 - Verilog netlist
 - Liberty library
@@ -172,7 +175,7 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
 ```    
     set_input_transition 10 –min –rise [get_ports inp1]
 ```
- 4. Capacitive load on output pin
+4. Capacitive load on output pin
  ```
     set_load –pin_load 4 [get_ports out]
 ```
@@ -197,15 +200,10 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
 ![image](https://user-images.githubusercontent.com/120498080/219946164-6859b94d-1138-4dc8-9e54-6b5515855da0.png)
 ![image](https://user-images.githubusercontent.com/120498080/219946136-f627ba62-19f7-4d1c-b098-56648db7c89b.png)
 
-    
-    
-    
-    
-    
 - [Reference](https://drive.google.com/drive/u/0/folders/15YtGdyPnk70pvFP4UgKUmNt9xR1XYTMm)
  
- 
- 
+## Day 2
+---  
  
  
  
