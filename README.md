@@ -125,7 +125,79 @@ We can define a **clock** signal as the one which synchronizes the state transit
 ![Screenshot (2431)](https://user-images.githubusercontent.com/120498080/219943801-bd0b93e3-4dd2-4223-af7e-50103e848899.png)
 
 
+### Lab 1
+First download the working folder
+```
+git clone https://github.com/vikkisachdeva/openSTA_sta_workshop    
+```    
+#### OpenSTA
+OpenSTA is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats.
+- Verilog netlist
+- Liberty library
+- SDC timing constraints
+- SDF delay annotation
+- SPEF parasitics
+    
+OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell, constraints as input and perform timing checks on the design.
+
+    
+### Inputs to OpenSTA
+1. Netlist format(Usually provided in Verilog using read_verilog command)
+    
+#### Standard cells or lib cells instantiations in `simple.v` file
+![image](https://user-images.githubusercontent.com/120498080/219945195-a945e09c-bf18-4615-a97c-9f057fa43990.png)
   
+2. Standard Cells (Provided in .lib format{`sky130_fd_sc_hd_tt_025C_1v80.lib`} using read_liberty command). A typical cell will have 
+- Input ports definitions
+- Output port definitions
+- Functionality of the cells
+- Input to Output relationship
+    
+    
+3. Timing constraints(Provided in sdc format using read_sdc command)
+
+### Constraints Creation
+1. Clocks are defined using `create_clock` command (Lets define a clock with period 50 on port tau2015_clk)
+```
+    create_clock –period 50 –name tau2015_clk [get_ports tau2015_clk]
+```
+    
+2. IO delays(Primary ports are defined with delays with associated clock: tau2015_clk)
+```
+    set_input_delay 5 –max –rise [get_ports inp1] –clock tau2015_clk
+    set_output_delay -10 –min –fall [get_ports out] –clock tau2015_clk
+```
+3. Input transitions by environmental factors
+```    
+    set_input_transition 10 –min –rise [get_ports inp1]
+```
+ 4. Capacitive load on output pin
+ ```
+    set_load –pin_load 4 [get_ports out]
+```
+#### The` simple.sdc` file 
+- Which consists of the clock period, IO delays, input transition and capacitance delays.
+![image](https://user-images.githubusercontent.com/120498080/219945430-66f5215c-c7be-42f6-b57a-2fb570a9054b.png)    
+    
+### runScript
+- In runscript you can define all the commands you want to run in the openSTA tool
+- Tool will execute each command sequentially in order(There are some commands which are executed in parallel in some cases)
+- Runscript is in `.tcl` format.
+#### `run.tcl` script
+![image](https://user-images.githubusercontent.com/120498080/219945663-32af476f-6ab2-4e6f-b099-100624519cf0.png)
+
+### Run OpenSTA
+• Run openSTA using command 
+```
+    sta run.tcl -exit | tee run.log
+```
+    
+    
+    
+    
+    
+    
+- [Reference](https://drive.google.com/drive/u/0/folders/15YtGdyPnk70pvFP4UgKUmNt9xR1XYTMm)
  
  
  
@@ -159,7 +231,7 @@ We can define a **clock** signal as the one which synchronizes the state transit
  
  
  
- git clone https://github.com/vikkisachdeva/openSTA_sta_workshop
+ 
  
  
  
