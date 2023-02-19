@@ -40,6 +40,7 @@ STA breaks the path at
 <p align="center">
     <img src="https://user-images.githubusercontent.com/120498080/219847761-3572ebee-a802-4e65-bcce-ea63ed887ce7.png">
 
+    
 Each timing path consists of the following elements:
 
 - **Startpoint** - The start of a timing path where data is launched by a clock edge or where the data must be available at a specific time. Every startpoint must be either an input port or a register clock pin.
