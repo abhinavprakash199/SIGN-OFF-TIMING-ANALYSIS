@@ -110,6 +110,55 @@ We can define a **clock** signal as the one which synchronizes the state transit
 
   
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ git clone https://github.com/vikkisachdeva/openSTA_sta_workshop
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 ## Appendix
 ---
@@ -117,6 +166,7 @@ We can define a **clock** signal as the one which synchronizes the state transit
 ## References
 ---
 - https://www.synopsys.com/glossary/what-is-static-timing-analysis.html
+- https://github.com/Anmol-wq/VSD-IAT-Sign-off-Timing-Analysis---Basics-to-Advanced
 
 ## Acknowledgement
 ---
