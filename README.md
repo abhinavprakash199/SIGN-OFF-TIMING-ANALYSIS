@@ -200,7 +200,7 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
 ![image](https://user-images.githubusercontent.com/120498080/219946164-6859b94d-1138-4dc8-9e54-6b5515855da0.png)
 ![image](https://user-images.githubusercontent.com/120498080/219946136-f627ba62-19f7-4d1c-b098-56648db7c89b.png)
 
-- [Reference](https://drive.google.com/file/d/1L-zJrvT8lbbpEXGdJ0c0WO1ymvrw-lnc/view?usp=sharing)
+- [Reference for Lab 1](https://drive.google.com/file/d/1L-zJrvT8lbbpEXGdJ0c0WO1ymvrw-lnc/view?usp=sharing)
  
 ## Day 2
 ---  
@@ -267,9 +267,22 @@ The .lib file contains timing models and data to calcumax
 ![Screenshot (2442)](https://user-images.githubusercontent.com/120498080/220071960-0befd39b-4bb0-4bd5-9a0a-534e61e9d6a4.png)
 ![Screenshot (2443)](https://user-images.githubusercontent.com/120498080/220071978-5fbfbdc2-959c-499c-8622-eb17b4904b9f.png)
 ![Screenshot (2444)](https://user-images.githubusercontent.com/120498080/220072001-bb8e1afa-aa6d-4724-b86e-7581d4519391.png)
+### Exercise
+---
+#### Find all the cells in simple_max.lib
+- NAND2_X1 cells
+ ![image](https://user-images.githubusercontent.com/120498080/220090123-4b162606-b529-4a1d-b5c8-c289f54b3a83.png)
 
-    
-    
+#### Find all the pins of the cell NAND2_X1 in simple_max.lib
+- It has one output and 3 imput pins
+![image](https://user-images.githubusercontent.com/120498080/220090421-bfa87d2d-25fe-4160-9195-41d7a8ccc69e.png)
+
+#### What difference you see between NAND2_X1 and NAND3_X1
+- NAND2_X1 is 2 input nand gate and NAND3_X1 is 3 imput nand gate.
+#### What is the difference between ‘simple_max.lib’ and ‘simple_min.lib’
+- I compared the file and found they have differnet values in `cell_ fall`, `fall_transition`, `cell_rise` and `rise_transition`of all the cells.
+![Screenshot (2449)](https://user-images.githubusercontent.com/120498080/220093103-0638f15e-04da-493a-9d67-f120453f014c.png)
+  
 ### SPEF File
 - A SPEF (Standard Parasitic Exchange Format) file describes parasitic information of the design. 
 - Users would never create this file manually.
@@ -282,8 +295,27 @@ A Typical SPEF File has 4 main sections
 3. Top Level Ports
 4. Parasitic description
 
- 
-- [Reference](https://drive.google.com/file/d/1A2SBqSQWAvsr65dGsNvp4cHjgwkc2uql/view?usp=sharing)
+#### `simple.spef` file
+![image](https://user-images.githubusercontent.com/120498080/220094978-626dff99-a9c2-4509-ae52-4c81443b9621.png)    
+
+#### `run.tcl` script
+![image](https://user-images.githubusercontent.com/120498080/220094332-4669744a-974e-44ef-9dc9-b4a64b5569e9.png)
+
+### Run OpenSTA
+• Run openSTA again using command 
+```
+    sta run.tcl -exit | tee run.log
+```
+###Exercises
+####Understand other paths in run.log
+
+![image](https://user-images.githubusercontent.com/120498080/220098148-a37771fe-6d8e-4b26-a5c0-571fb9570287.png)
+
+#### Understanding Timing Reports
+![Screenshot (2445)](https://user-images.githubusercontent.com/120498080/220099771-cb481c96-2e5d-4fd3-86c0-05d6facee4e9.png)
+
+    
+- [Reference from Lab 2](https://drive.google.com/file/d/1A2SBqSQWAvsr65dGsNvp4cHjgwkc2uql/view?usp=sharing)
  
  
  
