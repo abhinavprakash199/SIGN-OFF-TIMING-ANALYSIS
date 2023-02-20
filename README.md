@@ -252,23 +252,9 @@ When STA tool dose analysis and reports setup and hold timing, its first convert
 ![Screenshot (2438)](https://user-images.githubusercontent.com/120498080/220064935-353bce95-62b9-43e4-81ae-871a6a9e0994.png)
 
 #### Sample STA Text Report
-![Screenshot (2441)](https://user-images.githubusercontent.com/120498080/220065022-e41f769b-8365-4265-9d3d-47b607000bf5.png)
+![Screenshot (2441)](https://user-images.githubusercontent.com/120498080/220065230-b7350659-e6a7-4edc-92ac-ae32057a372f.png)
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
  
  
  
