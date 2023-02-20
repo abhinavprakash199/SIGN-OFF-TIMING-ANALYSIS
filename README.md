@@ -364,40 +364,49 @@ These archs don't involve any state element or memory device (like combinational
 #### Sequentional Archs
 - These are related to clocks like our setup and hold timing. There are setup and hold arch which tells us about the setup and hold time requirement of the library. 
 - It has delay arch defined in the logical library.
+    
 ![Screenshot (2459)](https://user-images.githubusercontent.com/120498080/220180141-26fa2fea-406a-40de-8e76-9f14251ddd37.png)
 
 #### Positive Unate Arch
 Positive Unate Arch follows the input in same direction. It basically tells us that when input rises the output also rises or when input falls the output also going to fall.
+    
 ![Screenshot (2460)](https://user-images.githubusercontent.com/120498080/220180335-88c2756e-4d47-4d87-82c2-1e88e0d4a625.png)
 
 #### Negative Unate Arch 
 Negative Unate Arch follows the input in opposite direction. It basically tells us that when input rises the output falls or when input rises the output also going to fall.
+    
 ![Screenshot (2461)](https://user-images.githubusercontent.com/120498080/220180334-52041390-2ed7-49e1-ab6e-1b5bc5e08da3.png)
 
 #### Non Unate Arch
-In Non Unate Arch output cant be predicted the output when input changes 
+In Non Unate Arch output cant be predicted the output when input changes.
+    
 ![Screenshot (2463)](https://user-images.githubusercontent.com/120498080/220180418-28b0788b-96fc-4009-992c-a6a443c5d934.png)
 
  
 ### Cell Delays 
 - Cell Arch have these Cell Delays 
+    
 ![Screenshot (2465)](https://user-images.githubusercontent.com/120498080/220181078-10ab6c17-25f9-42b2-932d-06c5c93c13a5.png)
 
 ### Clock Skew
 - Clock Skew is the time difference between arrival of the same edge of a clock signal at the Clock pin of the capture flop and launch flop.
 - It is basically the delay difference between the two clocks.
+    
 ![Screenshot (2466)](https://user-images.githubusercontent.com/120498080/220183083-b319876a-aa90-4a5a-88a3-0c303cbd7fa3.png)
 - So because of the positive skew we got the extra time to meet setup and it makes setup time easer to meet, whereas to meet hold time we need to keep the data stable for more time. 
+    
 ![Screenshot (2467)](https://user-images.githubusercontent.com/120498080/220183110-e4aa164a-f019-4664-9bec-d9922065a86c.png)
 - So because of the negative skew we got the less time to meet setup and it makes setup time difficult to meet, whereas to meet hold time we need to keep the data stable for less time. 
  
 ### Clock Latency
-- The time taken by Clock signal to reach from clock source to the clock pin of a particular flip flop is called as Clock latency
+- The time taken by Clock signal to reach from clock source to the clock pin of a particular flip flop is called as Clock latency.
+    
 ![Screenshot (2468)](https://user-images.githubusercontent.com/120498080/220183662-94cbea73-03f0-4a70-ae2b-1df8b2e0e1a4.png)
 
 
 ### Clock Jitter
 - Clock jitter is a characteristic of the clock source and the clock signal environment. It can be defined as “deviation of a clock edge from its ideal location.” Clock jitter is typically caused by clock generator circuitry, noise, power supply variations, interference from nearby circuitry etc.
+    
 ![Screenshot (2469)](https://user-images.githubusercontent.com/120498080/220183707-c17713db-3ef3-41fb-9cad-e52ec50015ce.png)
  
  
