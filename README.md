@@ -29,7 +29,18 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
         - [SPEF Files](#SPEF-Files)
         - [Exercise 2](#Exercise-2)
 * [Day 3](#day-3)
-
+    + [Multiple Clocks](#Multiple-Clocks)
+    + [Types of Arch](#Types-of-Arch)
+    + [Cell Delays](#Cell-Delays)
+    + [Clock Skew](#Clock-Skew)
+    + [Clock Latency](#Clock-Latency)
+    + [Clock Jitter](#Clock-Jitter)
+    + [Setup Check](#Setup-Check)
+    + [Hold Check](#Hold-Check)
+    + [CRPR-Clock Reconvergence Pessimism Removal](#CRPR-Clock-Reconvergence-Pessimism-Removal)
+    + [Lab 3](#Lab-3)
+    
+    
 * [Appendix](#Appendix)
 * [References](#references)
 * [Acknowledgement](#acknowledgement)
@@ -343,8 +354,10 @@ When different types of clock are present(of different frequency) then setup che
 ![Screenshot (2453)](https://user-images.githubusercontent.com/120498080/220174671-1e2144bf-a536-416a-85c0-7a4bd32ee4b3.png)
 #### Hold Check
 There are tro rules for Hold Check
-1. ![Screenshot (2456)](https://user-images.githubusercontent.com/120498080/220174940-6e48e9b7-f132-4b30-a3fb-717030970964.png)
-2. ![Screenshot (2455)](https://user-images.githubusercontent.com/120498080/220174912-32a1e3a2-7a24-4ab8-a7e6-df7fe2230f72.png)
+1.
+    ![Screenshot (2456)](https://user-images.githubusercontent.com/120498080/220174940-6e48e9b7-f132-4b30-a3fb-717030970964.png)
+2. 
+    ![Screenshot (2455)](https://user-images.githubusercontent.com/120498080/220174912-32a1e3a2-7a24-4ab8-a7e6-df7fe2230f72.png)
 
 ![Screenshot (2454)](https://user-images.githubusercontent.com/120498080/220174999-2b3d1729-af1a-458e-8898-ba61927ce858.png)
 
@@ -420,15 +433,37 @@ In Non Unate Arch output cant be predicted the output when input changes.
 ![Screenshot (2478)](https://user-images.githubusercontent.com/120498080/220193081-4fd32cf8-2f18-4349-8c4a-9069564219f8.png)
  
     
-### CRPR Clock Reconvergence Pessimism Removal
+### CRPR-Clock Reconvergence Pessimism Removal
  
 ![Screenshot (2479)](https://user-images.githubusercontent.com/120498080/220192392-95da6514-59d8-4362-b9d3-806b0c0a5d5a.png)
 - During decision of max and min launch path sometimes there is confussion in choosing the best path because some part of the circuit is common in two paths and that can be soled by CRPF    
 - Clock reconvergence pessimism (CRP) is a delay difference between the launching and capturing clock pathways. The most prevalent causes of CRP are convergent pathways in the clock network and varying minimum and maximum delays of clock network cells.  
  
-## Lab 3
+### Lab 3
 ---
 - [Reference from Lab 3](https://drive.google.com/file/d/15GElaM4zCY1tjLTkZI6W2D4XMQhhLtl4/view?usp=sharing)
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 ## Lab 4    
