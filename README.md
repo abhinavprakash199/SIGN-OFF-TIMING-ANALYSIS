@@ -15,6 +15,8 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
     + [Clock](#Clock)
     + [Port Delays and Boundary Constrains](#Port-Delays-and-Boundary-Constrains)
     + [Lab 1 OpenSTA](#Lab-1-OpenSTA)
+        - [OpenSTA](#OpenSTA)
+    
 * [Day 2](#day-2)
     
 * [Appendix](#Appendix)
@@ -129,7 +131,7 @@ We can define a **clock** signal as the one which synchronizes the state transit
 ![Screenshot (2431)](https://user-images.githubusercontent.com/120498080/219943801-bd0b93e3-4dd2-4223-af7e-50103e848899.png)
 
 
-### Lab 1 OpenSTA
+### Lab 1 
 ---
 First download the working folder
 ```
