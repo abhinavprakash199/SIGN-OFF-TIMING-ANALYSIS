@@ -130,6 +130,7 @@ We can define a **clock** signal as the one which synchronizes the state transit
 
 
 ### Lab 1 OpenSTA
+---
 First download the working folder
 ```
 git clone https://github.com/vikkisachdeva/openSTA_sta_workshop    
@@ -189,7 +190,7 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
 - Runscript is in `.tcl` format.
 #### `run.tcl` script
 ![image](https://user-images.githubusercontent.com/120498080/219945663-32af476f-6ab2-4e6f-b099-100624519cf0.png)
-
+- `report_checks` command is used to report timing on the design.   
 ### Run OpenSTA
 • Run openSTA using command 
 ```
@@ -307,11 +308,14 @@ A Typical SPEF File has 4 main sections
 ```
     sta run.tcl -exit | tee run.log
 ```
-###Exercises
-####Understand other paths in run.log
-
+### Exercises
+---
+#### Understand other paths in `run.log`
+- `report_checks` command is used to report timing on the design.
+#### `run.tcl` script
 ![image](https://user-images.githubusercontent.com/120498080/220098148-a37771fe-6d8e-4b26-a5c0-571fb9570287.png)
 
+    
 #### Understanding Timing Reports
 ![Screenshot (2445)](https://user-images.githubusercontent.com/120498080/220099771-cb481c96-2e5d-4fd3-86c0-05d6facee4e9.png)
 
