@@ -28,7 +28,8 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
         - [Exercise 1](#Exercise-1)
         - [SPEF Files](#SPEF-Files)
         - [Exercise 2](#Exercise-2)
-    
+* [Day 3](#day-3)
+
 * [Appendix](#Appendix)
 * [References](#references)
 * [Acknowledgement](#acknowledgement)
@@ -334,7 +335,9 @@ A Typical SPEF File has 4 main sections
     
 - [Reference from Lab 2](https://drive.google.com/file/d/1A2SBqSQWAvsr65dGsNvp4cHjgwkc2uql/view?usp=sharing)
  
- 
+## Day 3
+---
+### Multiple Clocks
  
  
  
