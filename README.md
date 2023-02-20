@@ -227,7 +227,11 @@ Design Rule Checks specifies about
 ![Screenshot (2435)](https://user-images.githubusercontent.com/120498080/220009675-1187a5b1-ab0f-4735-8176-62f54bb8f021.png)
     
 4. Pulse Width Checks
+- As clock travels through the path the clock pulse can change(can happen when rise delay and fall delay are not same) called as Shrinked Clock.
+- If this shrinked clock is below the certain value then pulse width violation happens.
+![Screenshot (2436)](https://user-images.githubusercontent.com/120498080/220012119-0e931c35-392c-429e-b1fa-e73cffd47534.png)
 
+### Latch Timing
  
  
  
