@@ -281,7 +281,7 @@ The .lib file contains timing models and data to calcumax
 - NAND2_X1 is 2 input nand gate and NAND3_X1 is 3 imput nand gate.
 #### What is the difference between ‘simple_max.lib’ and ‘simple_min.lib’
 - I compared the file and found they have differnet values in `cell_ fall`, `fall_transition`, `cell_rise` and `rise_transition`of all the cells.
-![Screenshot (2449)](https://user-images.githubusercontent.com/120498080/220093103-0638f15e-04da-493a-9d67-f120453f014c.png)
+![Screenshot (2448)](https://user-images.githubusercontent.com/120498080/220101858-5751278d-65e7-46b7-a543-5dd9ef201d4d.png)
   
 ### SPEF File
 - A SPEF (Standard Parasitic Exchange Format) file describes parasitic information of the design. 
