@@ -297,7 +297,8 @@ A Typical SPEF File has 4 main sections
 
 #### `simple.spef` file
 ![image](https://user-images.githubusercontent.com/120498080/220094978-626dff99-a9c2-4509-ae52-4c81443b9621.png)    
-
+#### Standard cells or lib cells instantiations in `simple.v` file
+![image](https://user-images.githubusercontent.com/120498080/220113317-975ec099-319d-4eab-af30-d05c1f2f2e1b.png)
 #### `run.tcl` script
 ![image](https://user-images.githubusercontent.com/120498080/220094332-4669744a-974e-44ef-9dc9-b4a64b5569e9.png)
 
