@@ -483,6 +483,7 @@ In Non Unate Arch output cant be predicted the output when input changes.
 ---
 - https://www.synopsys.com/glossary/what-is-static-timing-analysis.html
 - https://github.com/Anmol-wq/VSD-IAT-Sign-off-Timing-Analysis---Basics-to-Advanced
+- [OpenSTA installation guide](https://github.com/The-OpenROAD-Project/OpenSTA)
 
     
 ## Acknowledgement
