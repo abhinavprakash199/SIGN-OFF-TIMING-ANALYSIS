@@ -204,8 +204,30 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
  
 ## Day 2
 ---  
- 
- 
+### Other Timing Checks
+Apart from Hold and Setup checks(which happens in data pins with respect to data pins) STA also dose other types of check like 
+- Clock Gating Checks(done on clock enable pin with respect to the clock pin)
+- Async Pin Checks(checks when reset pin, set pin, clear pin can be inserted with respect to clock) 
+- Data to Data Checks(identify may skew between 2 pins)
+    
+![Screenshot (2432)](https://user-images.githubusercontent.com/120498080/220008152-e9e18ba2-8a53-46d2-ba26-ba5f8b6d62c9.png)
+### Design Rule Checks
+Design Rule Checks specifies about
+1. Slew/Transition Analysis
+![Screenshot (2433)](https://user-images.githubusercontent.com/120498080/220009643-a2cb650b-0447-4aae-9da2-fff4fbc33ed5.png)
+  
+2. Load Analysis
+- We can specify minimum and maximum capacitance on ports and nets.
+- Also specify the maximum fanout load on ports and output pins.
+    
+3. Clock Skew Analysis
+- It is difference in delay of the clock at different points.
+- It is basically the delay between the launch clock and capture clock.
+- Skew is said to be positive when caputre clock has more delay.
+![Screenshot (2435)](https://user-images.githubusercontent.com/120498080/220009675-1187a5b1-ab0f-4735-8176-62f54bb8f021.png)
+    
+4. Pulse Width Checks
+
  
  
  
