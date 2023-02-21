@@ -39,9 +39,9 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
     + [Hold Check](#Hold-Check)
     + [CRPR-Clock Reconvergence Pessimism Removal](#CRPR-Clock-Reconvergence-Pessimism-Removal)
     + [Lab 3](#Lab-3)
-        - [Exercise 3.1](#Exercise 3.1)
+        - [Exercise 3.1](#Exercise-3.1)
 * [Day 4](#day-4)  
-    `+ [Crosstalk and Noise](#Crosstalk-and-Noise)
+    + [Crosstalk and Noise](#Crosstalk-and-Noise)
 * [Day 5](#day-5)   
     
 * [Appendix](#Appendix)
