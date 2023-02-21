@@ -18,19 +18,10 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
         - [SPEF Files](#SPEF-Files)
         - [Exercise 2.2](#Exercise-2.2)
 * [Day 3](#day-3)
-    + [Multiple Clocks](#Multiple-Clocks)
-    + [Types of Arch](#Types-of-Arch)
-    + [Cell Delays](#Cell-Delays)
-    + [Clock Skew](#Clock-Skew)
-    + [Clock Latency](#Clock-Latency)
-    + [Clock Jitter](#Clock-Jitter)
-    + [Setup Check](#Setup-Check)
-    + [Hold Check](#Hold-Check)
-    + [CRPR-Clock Reconvergence Pessimism Removal](#CRPR-Clock-Reconvergence-Pessimism-Removal)
     + [Lab 3](#Lab-3)
         - [Exercise 3.1](#Exercise-3.1)
 * [Day 4](#day-4)  
-    + [Crosstalk and Noise](#Crosstalk-and-Noise)
+    + [Lab 4](#Lab-4)
 * [Day 5](#day-5)   
     
 * [Appendix](#Appendix)
@@ -189,97 +180,8 @@ A Typical SPEF File has 4 main sections
  
 ## Day 3
 ---
-### Multiple Clocks
-When different types of clock are present(of different frequency) then setup check is calculated or the most restrictive setup is identified by first expanding a clock by a **common base period** and in that whichever is the closest launch and capture which is used find the most restrictive setup. The hold check is dependent upon the setup check.
-#### Setup Check
-![Screenshot (2453)](https://user-images.githubusercontent.com/120498080/220174671-1e2144bf-a536-416a-85c0-7a4bd32ee4b3.png)
-#### Hold Check
-There are tro rules for Hold Check
-1.
-    ![Screenshot (2456)](https://user-images.githubusercontent.com/120498080/220174940-6e48e9b7-f132-4b30-a3fb-717030970964.png)
-2. 
-    ![Screenshot (2455)](https://user-images.githubusercontent.com/120498080/220174912-32a1e3a2-7a24-4ab8-a7e6-df7fe2230f72.png)
-
-![Screenshot (2454)](https://user-images.githubusercontent.com/120498080/220174999-2b3d1729-af1a-458e-8898-ba61927ce858.png)
-
-### Types of Arch 
-#### Timing Arch 
-They are of two types 
-1. **Cell Arch** - It is the input to output connection in the cell present in logical libraries . These arch will have information about the input-output functionality, rise and fall time, delays, etc. 
-2. **Net Arch** - It connects one cell to other cell and there are ways to calculate the information about the cell to cell rise and fall time, delays, etc.
-
-![Screenshot (2457)](https://user-images.githubusercontent.com/120498080/220179768-46cd79a4-1597-4ee4-9647-429956367399.png)
-
-#### Combinational Archs
-These archs don't involve any state element or memory device (like combinational circuits).
-
-![Screenshot (2458)](https://user-images.githubusercontent.com/120498080/220180142-59855bda-ffb5-496c-9432-a716be870cfe.png)
- 
-#### Sequentional Archs
-- These are related to clocks like our setup and hold timing. There are setup and hold arch which tells us about the setup and hold time requirement of the library. 
-- It has delay arch defined in the logical library.
+[Day 3 Theory](https://github.com/abhinavprakash199/SIGN-OFF-TIMING-ANALYSIS/blob/main/THEORY.md#day-3)
     
-![Screenshot (2459)](https://user-images.githubusercontent.com/120498080/220180141-26fa2fea-406a-40de-8e76-9f14251ddd37.png)
-
-#### Positive Unate Arch
-Positive Unate Arch follows the input in same direction. It basically tells us that when input rises the output also rises or when input falls the output also going to fall.
-    
-![Screenshot (2460)](https://user-images.githubusercontent.com/120498080/220180335-88c2756e-4d47-4d87-82c2-1e88e0d4a625.png)
-
-#### Negative Unate Arch 
-Negative Unate Arch follows the input in opposite direction. It basically tells us that when input rises the output falls or when input rises the output also going to fall.
-    
-![Screenshot (2461)](https://user-images.githubusercontent.com/120498080/220180334-52041390-2ed7-49e1-ab6e-1b5bc5e08da3.png)
-
-#### Non Unate Arch
-In Non Unate Arch output cant be predicted the output when input changes.
-    
-![Screenshot (2463)](https://user-images.githubusercontent.com/120498080/220180418-28b0788b-96fc-4009-992c-a6a443c5d934.png)
-
- 
-### Cell Delays 
-- Cell Arch have these Cell Delays 
-    
-![Screenshot (2465)](https://user-images.githubusercontent.com/120498080/220181078-10ab6c17-25f9-42b2-932d-06c5c93c13a5.png)
-
-### Clock Skew
-- Clock Skew is the time difference between arrival of the same edge of a clock signal at the Clock pin of the capture flop and launch flop.
-- It is basically the delay difference between the two clocks.
-    
-![Screenshot (2466)](https://user-images.githubusercontent.com/120498080/220183083-b319876a-aa90-4a5a-88a3-0c303cbd7fa3.png)
-- So because of the positive skew we got the extra time to meet setup and it makes setup time easer to meet, whereas to meet hold time we need to keep the data stable for more time. 
-    
-![Screenshot (2467)](https://user-images.githubusercontent.com/120498080/220183110-e4aa164a-f019-4664-9bec-d9922065a86c.png)
-- So because of the negative skew we got the less time to meet setup and it makes setup time difficult to meet, whereas to meet hold time we need to keep the data stable for less time. 
- 
-### Clock Latency
-- The time taken by Clock signal to reach from clock source to the clock pin of a particular flip flop is called as Clock latency.
-    
-![Screenshot (2468)](https://user-images.githubusercontent.com/120498080/220183662-94cbea73-03f0-4a70-ae2b-1df8b2e0e1a4.png)
-
-
-### Clock Jitter
-- Clock jitter is a characteristic of the clock source and the clock signal environment. It can be defined as “deviation of a clock edge from its ideal location.” Clock jitter is typically caused by clock generator circuitry, noise, power supply variations, interference from nearby circuitry etc.
-    
-![Screenshot (2469)](https://user-images.githubusercontent.com/120498080/220183707-c17713db-3ef3-41fb-9cad-e52ec50015ce.png)
- 
-### Setup Check
-![Screenshot (2471)](https://user-images.githubusercontent.com/120498080/220192551-c8c93b42-4f29-4820-a7e4-f183a3627173.png)
-![Screenshot (2473)](https://user-images.githubusercontent.com/120498080/220192560-3d0a3679-87d6-4589-b753-24e05ef6283b.png)
-![Screenshot (2477)](https://user-images.githubusercontent.com/120498080/220192613-e7588eea-9342-48f5-856b-d8b4b2c32a6f.png)
- 
-### Hold Check
-![Screenshot (2474)](https://user-images.githubusercontent.com/120498080/220193019-72e6054d-afe9-4514-b16e-cb1423c7ac97.png)
-![Screenshot (2476)](https://user-images.githubusercontent.com/120498080/220193051-2bfa198c-6317-495f-977e-a2532b20f1ff.png)
-![Screenshot (2478)](https://user-images.githubusercontent.com/120498080/220193081-4fd32cf8-2f18-4349-8c4a-9069564219f8.png)
- 
-    
-### CRPR-Clock Reconvergence Pessimism Removal
- 
-![Screenshot (2479)](https://user-images.githubusercontent.com/120498080/220192392-95da6514-59d8-4362-b9d3-806b0c0a5d5a.png)
-- During decision of max and min launch path sometimes there is confussion in choosing the best path because some part of the circuit is common in two paths and that can be soled by CRPF    
-- Clock reconvergence pessimism (CRP) is a delay difference between the launching and capturing clock pathways. The most prevalent causes of CRP are convergent pathways in the clock network and varying minimum and maximum delays of clock network cells.  
- 
 ### Lab 3
 ---
 #### Circuit
@@ -322,49 +224,7 @@ In Non Unate Arch output cant be predicted the output when input changes.
     
 ## Day 4
 ---
-### Crosstalk and Noise
-Crosstalk is any phenomenon in electronics that occurs when a signal carried on one circuit or channel of a transmission system causes an undesirable effect in another circuit or channel.
-![Screenshot (2487)](https://user-images.githubusercontent.com/120498080/220415424-0f54faea-a132-4c85-a22b-b8d0464570fe.png)
-- In this when both aggressor is changing from 0 to 1 and victim is also changing in the same direction so it can couse the victim signal to change faster, hence rise time changes and **delay decreses**
-- If the aggressor and victim are changing in opposite direction then because of coupling caps aggressor will try to push the victim signal in same direction, hence chage becomes slower in victim which in **increases delay**
-- STA take this changes into consideration and accordingly calculate setup and hold time.
-    
-![Screenshot (2488)](https://user-images.githubusercontent.com/120498080/220418621-7cb980de-6442-43f0-b403-faf870126c88.png)
-- When aggressor is changing whereas victim signal in not changing so we can have glich in the victim signal which could lead to functional failure. So STA need to make sure these glitches are not present or should be below a threshold value.
-    
-### Process Variation
-- Sometimes we have process variation(can have differnt delay or transition time)within a chip or from wafer to wafer or within the wafer. So STA need to take this into account.
-![Screenshot (2489)](https://user-images.githubusercontent.com/120498080/220419851-f8659c13-246d-432a-8564-11ef1a2baaa9.png)
-    
-### Clock Gating Checks 
-- A clock gating check occurs when a gating signal can control the path of a clock signal at a logic cell. For example when a clock and enable signal is fedded as input to an AND gate.
-- The signal must be used as clock downstream, like feed a flop or latch clock pin or feed output port or feed generated clock.
-- Intention of this check is that transition on gating pin does not Create unnecessary active edge of the clock in the fanout.
 
-![Screenshot (2490)](https://user-images.githubusercontent.com/120498080/220424817-99037fb4-c0bb-405d-b2e4-74bdf5905a5d.png)
-- So in case of AND and NAND gates clock gating checks that during setup check the enable should become stable sometime before the clock rising edge(so that coack has enough setup time) and during hold check the enable should become stable sometime after the clock rising edge
-    
-![Screenshot (2491)](https://user-images.githubusercontent.com/120498080/220424864-58615adc-4b19-4732-9ce3-e7a1642388a4.png)
-- So in case of OR or NOR gates clock gating checks that before some time and after some time of the low value of the clock enable pin should be stable.
-    
-Sometimes tools cannot set this clock gating checks and gives error, so we need to do it manually by suing this commands
-```
-   set_clock_gating_check
-```
-  
-### Checks on Async Pins
-- Async Pins in the designes are reset or clear pins 
-- These checks are needed only of asynchronous pins not for synchronous pins(beacure synchronous reset pins come from flops which is alraedy synchronised )
-    
-![Screenshot (2494)](https://user-images.githubusercontent.com/120498080/220427042-5de0431f-4639-4553-8c9f-7ea7a52b59aa.png)
-- Assertion means clear is on and outputs are zero, which is indepeant of clock
-- De-assertion means clear is off and output is dependent on input and clock.
-    
-![Screenshot (2495)](https://user-images.githubusercontent.com/120498080/220429740-d796001e-ca66-4ab3-8176-9d6c1b826108.png)
-![Screenshot (2496)](https://user-images.githubusercontent.com/120498080/220429770-7cfc8dbe-dcb9-4ea4-893c-9dca6d6d289e.png)
-    
-- Assertion to De-assertion change should not happen very close to clock edge, it should happen sometime before clock edge and sometime after clock edge which is known as the **Recovery Time** and this time requirement is given by the logival liblary of the flop 
-    
 ## Lab 4    
 ---
 - [Reference from Lab 4](https://drive.google.com/file/d/18A2-AUr6HjYo7iSLXuEEQjyHcmYkpfdh/view?usp=sharing)
