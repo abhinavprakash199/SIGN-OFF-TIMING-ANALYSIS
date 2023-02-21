@@ -26,7 +26,9 @@
 
 * [Day 4](#day-4)
     + [Crosstalk and Noise](#Crosstalk-and-Noise)
-    + 
+    + [Process Variation](#Process-Variation)
+    + [Clock Gating Checks](#Clock-Gating-Checks)
+    + [Checks on Async Pins](#Checks-on-Async-Pins)
 
 ## Day 1
 ---
@@ -288,6 +290,7 @@ When STA tool dose analysis and reports setup and hold timing, its first convert
 ---
 ### Crosstalk and Noise
 Crosstalk is any phenomenon in electronics that occurs when a signal carried on one circuit or channel of a transmission system causes an undesirable effect in another circuit or channel.
+    
 ![Screenshot (2487)](https://user-images.githubusercontent.com/120498080/220415424-0f54faea-a132-4c85-a22b-b8d0464570fe.png)
 - In this when both aggressor is changing from 0 to 1 and victim is also changing in the same direction so it can couse the victim signal to change faster, hence rise time changes and **delay decreses**
 - If the aggressor and victim are changing in opposite direction then because of coupling caps aggressor will try to push the victim signal in same direction, hence chage becomes slower in victim which in **increases delay**
@@ -298,6 +301,7 @@ Crosstalk is any phenomenon in electronics that occurs when a signal carried on 
     
 ### Process Variation
 - Sometimes we have process variation(can have differnt delay or transition time)within a chip or from wafer to wafer or within the wafer. So STA need to take this into account.
+    
 ![Screenshot (2489)](https://user-images.githubusercontent.com/120498080/220419851-f8659c13-246d-432a-8564-11ef1a2baaa9.png)
     
 ### Clock Gating Checks 
