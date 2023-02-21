@@ -49,7 +49,9 @@ OpenSTA is a gate level static timing verifier. As a stand-alone executable it c
     
 OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell, constraints as input and perform timing checks on the design.
 
-    
+### Terminal
+![image](https://user-images.githubusercontent.com/120498080/220437164-b14afedf-d730-4f1a-99e3-d6da9356ddc3.png)
+
 ### Inputs to OpenSTA
 1. Netlist format(Usually provided in Verilog using read_verilog command)
     
