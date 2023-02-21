@@ -118,7 +118,7 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
  
 ## Day 2
 ---  
-- [Day 1 Theory](https://github.com/abhinavprakash199/SIGN-OFF-TIMING-ANALYSIS/blob/main/THEORY.md#day-2)
+- [Day 2 Theory](https://github.com/abhinavprakash199/SIGN-OFF-TIMING-ANALYSIS/blob/main/THEORY.md#day-2)
 
 ### Lab 2
 --- 
