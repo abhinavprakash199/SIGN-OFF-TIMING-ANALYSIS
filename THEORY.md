@@ -30,6 +30,9 @@
     + [Clock Gating Checks](#Clock-Gating-Checks)
     + [Checks on Async Pins](#Checks-on-Async-Pins)
 
+* [Day 5](#day-5)  
+    + [Clock Groups](#Clock-Groups)
+
 ## Day 1
 ---
 ### STA Defination
@@ -332,4 +335,24 @@ Sometimes tools cannot set this clock gating checks and gives error, so we need 
 ![Screenshot (2496)](https://user-images.githubusercontent.com/120498080/220429770-7cfc8dbe-dcb9-4ea4-893c-9dca6d6d289e.png)
     
 - Assertion to De-assertion change should not happen very close to clock edge, it should happen sometime before clock edge and sometime after clock edge which is known as the **Recovery Time** and this time requirement is given by the logival liblary of the flop 
+    
+## Day 5
+---
+### Clock Groups    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
