@@ -489,6 +489,20 @@ In Non Unate Arch output cant be predicted the output when input changes.
     
     
     
+
+    
+    
+    
+    
+    
+    
+    
+```   
+   report_checks path_delay min_max -fields {nets cap slew input_pins} -digital{4} > sta_out/SD1.spt
+```
+    
+    
+    
     
     
     
