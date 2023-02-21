@@ -139,6 +139,7 @@ Design Rule Checks specifies about
 - We can specify minimum and maximum capacitance on ports and nets.
 - Also specify the maximum fanout load on ports and output pins.
     
+    
 3. Clock Skew Analysis
 - It is difference in delay of the clock at different points.
 - It is basically the delay between the launch clock and capture clock.
