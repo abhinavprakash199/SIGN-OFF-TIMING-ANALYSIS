@@ -7,6 +7,12 @@
     + [Clock](#Clock)
     + [Port Delays and Boundary Constrains](#Port-Delays-and-Boundary-Constrains)
 
+* [Day 2](#day-2)
+    + [Other Timing Checks](#Other-Timing-Checks)
+    + [Design Rule Checks](#Design-Rule-Checks)
+    + [Latch Timing](#Latch-Timing)
+    + [STA Text Report](#STA-Text-Report)
+
 ## Day 1
 ---
 ### STA Defination
@@ -113,3 +119,55 @@ We can define a **clock** signal as the one which synchronizes the state transit
 ![Screenshot (2430)](https://user-images.githubusercontent.com/120498080/219943792-7df05523-9188-449f-bcb1-067eadf4f34f.png)
 ![Screenshot (2431)](https://user-images.githubusercontent.com/120498080/219943801-bd0b93e3-4dd2-4223-af7e-50103e848899.png)
 
+
+## Day 2
+---    
+### Other Timing Checks
+Apart from Hold and Setup checks(which happens in data pins with respect to data pins) STA also dose other types of check like 
+- Clock Gating Checks(done on clock enable pin with respect to the clock pin)
+- Async Pin Checks(checks when reset pin, set pin, clear pin can be inserted with respect to clock) 
+- Data to Data Checks(identify may skew between 2 pins)
+    
+![Screenshot (2432)](https://user-images.githubusercontent.com/120498080/220008152-e9e18ba2-8a53-46d2-ba26-ba5f8b6d62c9.png)
+### Design Rule Checks
+Design Rule Checks specifies about
+1. Slew/Transition Analysis
+    
+![Screenshot (2433)](https://user-images.githubusercontent.com/120498080/220009643-a2cb650b-0447-4aae-9da2-fff4fbc33ed5.png)
+  
+2. Load Analysis
+- We can specify minimum and maximum capacitance on ports and nets.
+- Also specify the maximum fanout load on ports and output pins.
+    
+3. Clock Skew Analysis
+- It is difference in delay of the clock at different points.
+- It is basically the delay between the launch clock and capture clock.
+- Skew is said to be positive when caputre clock has more delay.
+    
+![Screenshot (2435)](https://user-images.githubusercontent.com/120498080/220009675-1187a5b1-ab0f-4735-8176-62f54bb8f021.png)
+    
+4. Pulse Width Checks
+- As clock travels through the path the clock pulse can change(can happen when rise delay and fall delay are not same) called as Shrinked Clock.
+- If this shrinked clock is below the certain value then pulse width violation happens.
+    
+![Screenshot (2436)](https://user-images.githubusercontent.com/120498080/220012119-0e931c35-392c-429e-b1fa-e73cffd47534.png)
+
+### Latch Timing
+**Latch can start sampling data from the rising edge(or falling edge) itself and continue sampling till the respective falling edge (or rising edge)** because latches are level sensitive whereas **Flipflop can only sample the data "at" Rising edge or Negative edge** because flipflops are edge sensitive. Both holds the data when they are disable (Latch disable at level and Flipflop disable just after triggering level).
+    
+Generally designers prefer flip flops over latches because of this edge-triggered property, which makes their life easy to do analysis and interpretation the design. 
+    
+Latch-based designs are preferred in case of clock frequency in GHz (in high-speed designs). In flip-flop-based high-speed designs, maintaining clock skew is a problem, but latches ease this problem.
+    
+#### Time Borrowing
+Time borrowing is the property of a latch by virtue of which a path ending at a latch can borrow time from the next path in pipeline such that the overall time of the two paths remains the same. The time borrowed by the latch from next stage in pipeline is, then, subtracted from the next path's time.
+    
+![Screenshot (2437)](https://user-images.githubusercontent.com/120498080/220060699-0882e529-c0a7-48fe-ae9d-930671ca6b97.png)
+
+### STA Text Report
+When STA tool dose analysis and reports setup and hold timing, its first converts that logic into nodes and cells and archs.
+  
+![Screenshot (2438)](https://user-images.githubusercontent.com/120498080/220064935-353bce95-62b9-43e4-81ae-871a6a9e0994.png)
+
+#### Sample STA Text Report
+![Screenshot (2441)](https://user-images.githubusercontent.com/120498080/220065230-b7350659-e6a7-4edc-92ac-ae32057a372f.png)    
