@@ -68,7 +68,7 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
  
 ### Liberty Files
 ![image](https://user-images.githubusercontent.com/120498080/220438774-7871a7d4-54b2-4318-824b-c46847a242e1.png)
-### Input and Oputput of Library Files
+### Input and Oputput of Liberty Files
 ![2](https://user-images.githubusercontent.com/120498080/220439330-5e8ad720-d945-4a0d-aa1e-f421dd609d63.PNG)
 
 3. Timing constraints(Provided in sdc format using `read_sdc` command)
@@ -137,20 +137,32 @@ The .lib file contains timing models and data to calcumax
 ![Screenshot (2444)](https://user-images.githubusercontent.com/120498080/220072001-bb8e1afa-aa6d-4724-b86e-7581d4519391.png)
 ### Exercise 2.1
 ---
-#### Find all the cells in simple_max.lib
-- NAND2_X1 cells
- ![image](https://user-images.githubusercontent.com/120498080/220090123-4b162606-b529-4a1d-b5c8-c289f54b3a83.png)
+#### Q1) Find all the cells in simple_max.lib
+    
+To find no of cells in `simple_max file` use this command 
+```
+    more simple_max.lib | gep -c " End cell"
+```
+- Tip to list all cells in a liberty in a `all_cell` file     
+```
+    more simple_max.lib | grep " End cell" | tee all_cell
+``` 
+#### Terminal
+![image](https://user-images.githubusercontent.com/120498080/220457376-1ee44af2-0656-4ce1-9717-97811d320754.png)
+    
+#### Q2) Find all the pins of the cell NAND2_X1 in `simple_max.lib`
+- It has 1 output and 2 input pins.
+![7](https://user-images.githubusercontent.com/120498080/220459325-b834ef64-db7c-42f2-90aa-cb4ba7700809.PNG)
+![8](https://user-images.githubusercontent.com/120498080/220459355-661982c3-cf51-4314-9c96-b703e01224a3.PNG)
 
-#### Find all the pins of the cell NAND2_X1 in simple_max.lib
-- It has one output and 3 imput pins
-![image](https://user-images.githubusercontent.com/120498080/220090421-bfa87d2d-25fe-4160-9195-41d7a8ccc69e.png)
 
-#### What difference you see between NAND2_X1 and NAND3_X1
-- NAND2_X1 is 2 input nand gate and NAND3_X1 is 3 imput nand gate.
-#### What is the difference between ‘simple_max.lib’ and ‘simple_min.lib’
+#### Q3) What difference you see between NAND2_X1 and NAND3_X1
+- NAND2_X1 is 2 input nand gate and NAND3_X1 is 3 input nand gate.
+#### Q4) What is the difference between ‘simple_max.lib’ and ‘simple_min.lib’
 - I compared the file and found they have differnet values in `cell_ fall`, `fall_transition`, `cell_rise` and `rise_transition`of all the cells.
+- Variations in the fabrication process could could either increase or decrease the delay pf cells. Timing analysis must take into account the min and max values of delay in liberty files. These libraries will be used by the STA tool for analysis.
 - These respresent the table which are calculated based on several equations and tells about paramenter like have different slope of rise and fall time delay, etc.
-- It also specify PVT variation in max and min conditions.
+- It specify PVT variation in max and min conditions.
 ![Screenshot (2448)](https://user-images.githubusercontent.com/120498080/220101858-5751278d-65e7-46b7-a543-5dd9ef201d4d.png)
   
 ### SPEF Files
