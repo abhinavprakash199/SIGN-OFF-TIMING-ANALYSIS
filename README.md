@@ -25,9 +25,9 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
     + [STA Text Report](#STA-Text-Report)
     + [Lab 2](#Lab-2)
         - [Liberty Files](#Liberty-Files)
-        - [Exercise 1](#Exercise-1)
+        - [Exercise 2.1](#Exercise-2.1)
         - [SPEF Files](#SPEF-Files)
-        - [Exercise 2](#Exercise-2)
+        - [Exercise 2.2](#Exercise-2.2)
 * [Day 3](#day-3)
     + [Multiple Clocks](#Multiple-Clocks)
     + [Types of Arch](#Types-of-Arch)
@@ -39,7 +39,10 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
     + [Hold Check](#Hold-Check)
     + [CRPR-Clock Reconvergence Pessimism Removal](#CRPR-Clock-Reconvergence-Pessimism-Removal)
     + [Lab 3](#Lab-3)
-    
+        - [Exercise 3.1](#Exercise 3.1)
+* [Day 4](#day-4)  
+    `+ [Crosstalk and Noise](#Crosstalk-and-Noise)
+* [Day 5](#day-5)   
     
 * [Appendix](#Appendix)
 * [References](#references)
@@ -292,7 +295,7 @@ The .lib file contains timing models and data to calcumax
 ![Screenshot (2442)](https://user-images.githubusercontent.com/120498080/220071960-0befd39b-4bb0-4bd5-9a0a-534e61e9d6a4.png)
 ![Screenshot (2443)](https://user-images.githubusercontent.com/120498080/220071978-5fbfbdc2-959c-499c-8622-eb17b4904b9f.png)
 ![Screenshot (2444)](https://user-images.githubusercontent.com/120498080/220072001-bb8e1afa-aa6d-4724-b86e-7581d4519391.png)
-### Exercise 1
+### Exercise 2.1
 ---
 #### Find all the cells in simple_max.lib
 - NAND2_X1 cells
@@ -332,7 +335,7 @@ A Typical SPEF File has 4 main sections
 ```
     sta run.tcl -exit | tee run.log
 ```
-### Exercise 2
+### Exercise 2.2
 ---
 #### Understand other paths in `run.log`
 - `report_checks` command is used to report timing on the design.
@@ -457,7 +460,7 @@ In Non Unate Arch output cant be predicted the output when input changes.
 #### Generated `run.log` file
 ![image](https://user-images.githubusercontent.com/120498080/220355776-c4bc0104-0455-4cc0-a5df-c2c6f8692c16.png)
 
-### Exercise 1
+### Exercise 3.1
 ---
 #### Change the number of paths being reported to 100 and analyze each path in detail and understand 
 ```
@@ -476,15 +479,12 @@ In Non Unate Arch output cant be predicted the output when input changes.
 - Here are the few comparision reports of duffernet timing paths.
 ![Screenshot (2481)](https://user-images.githubusercontent.com/120498080/220358189-9332cf1d-f50a-4d73-85ab-617b74472f9b.png)
 ![Screenshot (2483)](https://user-images.githubusercontent.com/120498080/220358230-597b252b-34a8-48f2-8508-a7f5a5b8393c.png)
-
-    
-    
-    
     
 - [Reference from Lab 3](https://drive.google.com/file/d/15GElaM4zCY1tjLTkZI6W2D4XMQhhLtl4/view?usp=sharing)
     
-  
-    
+## Day 4
+---
+### Crosstalk and Noise
     
     
     
@@ -509,6 +509,11 @@ In Non Unate Arch output cant be predicted the output when input changes.
 ## Lab 4    
 ---
 - [Reference from Lab 4](https://drive.google.com/file/d/18A2-AUr6HjYo7iSLXuEEQjyHcmYkpfdh/view?usp=sharing)
+## Day 5
+---
+    
+    
+    
 ## Lab 5
 ---
 - [Reference from Lab 5](https://drive.google.com/file/d/1oaHP7CLQrpXiUlowJXuGKhF0kTbOAmht/view?usp=sharing)
