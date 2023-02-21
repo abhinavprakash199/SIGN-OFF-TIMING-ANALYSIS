@@ -441,6 +441,46 @@ In Non Unate Arch output cant be predicted the output when input changes.
  
 ### Lab 3
 ---
+#### Circuit
+![Screenshot (2484)](https://user-images.githubusercontent.com/120498080/220355115-dacde325-1a7d-4f77-9962-16c9f2c98531.png)
+
+#### `v27.v` file
+![image](https://user-images.githubusercontent.com/120498080/220355350-65fdf476-d4e4-4071-a605-342b91ac0e7e.png)
+  
+#### `run.tcl` script
+![image](https://user-images.githubusercontent.com/120498080/220355084-298ccc5e-019b-457c-bb93-d22d62a65df6.png)
+
+- Run STA with command
+```
+    sta run.tcl -exit | tee run.log
+```
+#### Generated `run.log` file
+![image](https://user-images.githubusercontent.com/120498080/220355776-c4bc0104-0455-4cc0-a5df-c2c6f8692c16.png)
+
+### Exercise 1
+---
+#### Change the number of paths being reported to 100 and analyze each path in detail and understand 
+```
+    report_checks –from F1/CK -endpoint_count 100
+```
+#### Changed `run.tcl` script     
+![image](https://user-images.githubusercontent.com/120498080/220357030-340ed845-fddb-4ccd-833c-5eb337fc3e99.png)
+ 
+- Run STA with command    
+```    
+    sta run.tcl -exit | tee out.txt    
+```  
+#### Generated `out.txt` file
+![image](https://user-images.githubusercontent.com/120498080/220357408-0edbd63c-b018-48f7-8451-af7a8cbb162b.png)
+- This will created the timing report of all the possible path combination and edge triggered with differnet combination.
+- Here are the few comparision reports of duffernet timing paths.
+![Screenshot (2481)](https://user-images.githubusercontent.com/120498080/220358189-9332cf1d-f50a-4d73-85ab-617b74472f9b.png)
+![Screenshot (2483)](https://user-images.githubusercontent.com/120498080/220358230-597b252b-34a8-48f2-8508-a7f5a5b8393c.png)
+
+    
+    
+    
+    
 - [Reference from Lab 3](https://drive.google.com/file/d/15GElaM4zCY1tjLTkZI6W2D4XMQhhLtl4/view?usp=sharing)
     
   
