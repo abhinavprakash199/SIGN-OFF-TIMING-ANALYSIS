@@ -224,7 +224,8 @@ A Typical SPEF File has 4 main sections
     
 ## Day 4
 ---
-
+[Day 4 Theory](https://github.com/abhinavprakash199/SIGN-OFF-TIMING-ANALYSIS/blob/main/THEORY.md#day-4)
+    
 ## Lab 4    
 ---
 - [Reference from Lab 4](https://drive.google.com/file/d/18A2-AUr6HjYo7iSLXuEEQjyHcmYkpfdh/view?usp=sharing)
@@ -249,7 +250,7 @@ A Typical SPEF File has 4 main sections
     
 ## Day 5
 ---
-    
+[Day 5 Theory](https://github.com/abhinavprakash199/SIGN-OFF-TIMING-ANALYSIS/blob/main/THEORY.md#day-5)   
     
     
 ## Lab 5
