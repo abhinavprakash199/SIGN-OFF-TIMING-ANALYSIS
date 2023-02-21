@@ -158,8 +158,7 @@ Design Rule Checks specifies about
 2. Load Analysis
 - We can specify minimum and maximum capacitance on ports and nets.
 - Also specify the maximum fanout load on ports and output pins.
-    
-    
+      
 3. Clock Skew Analysis
 - It is difference in delay of the clock at different points.
 - It is basically the delay between the launch clock and capture clock.
@@ -175,6 +174,8 @@ Design Rule Checks specifies about
 
 ### Latch Timing
 **Latch can start sampling data from the rising edge(or falling edge) itself and continue sampling till the respective falling edge (or rising edge)** because latches are level sensitive whereas **Flipflop can only sample the data "at" Rising edge or Negative edge** because flipflops are edge sensitive. Both holds the data when they are disable (Latch disable at level and Flipflop disable just after triggering level).
+
+- In cade od STA Enable pin of the latch acts like a clock to a latch(as latches do nat have clock input).
     
 Generally designers prefer flip flops over latches because of this edge-triggered property, which makes their life easy to do analysis and interpretation the design. 
     
