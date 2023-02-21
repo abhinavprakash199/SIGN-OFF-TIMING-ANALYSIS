@@ -24,6 +24,10 @@
     + [Hold Check](#Hold-Check)
     + [CRPR-Clock Reconvergence Pessimism Removal](#CRPR-Clock-Reconvergence-Pessimism-Removal)
 
+* [Day 4](#day-4)
+    + [Crosstalk and Noise](#Crosstalk-and-Noise)
+    + 
+
 ## Day 1
 ---
 ### STA Defination
@@ -277,3 +281,51 @@ When STA tool dose analysis and reports setup and hold timing, its first convert
 
 #### Sample STA Text Report
 ![Screenshot (2441)](https://user-images.githubusercontent.com/120498080/220065230-b7350659-e6a7-4edc-92ac-ae32057a372f.png)    
+    
+    
+    
+## Day 4
+---
+### Crosstalk and Noise
+Crosstalk is any phenomenon in electronics that occurs when a signal carried on one circuit or channel of a transmission system causes an undesirable effect in another circuit or channel.
+![Screenshot (2487)](https://user-images.githubusercontent.com/120498080/220415424-0f54faea-a132-4c85-a22b-b8d0464570fe.png)
+- In this when both aggressor is changing from 0 to 1 and victim is also changing in the same direction so it can couse the victim signal to change faster, hence rise time changes and **delay decreses**
+- If the aggressor and victim are changing in opposite direction then because of coupling caps aggressor will try to push the victim signal in same direction, hence chage becomes slower in victim which in **increases delay**
+- STA take this changes into consideration and accordingly calculate setup and hold time.
+    
+![Screenshot (2488)](https://user-images.githubusercontent.com/120498080/220418621-7cb980de-6442-43f0-b403-faf870126c88.png)
+- When aggressor is changing whereas victim signal in not changing so we can have glich in the victim signal which could lead to functional failure. So STA need to make sure these glitches are not present or should be below a threshold value.
+    
+### Process Variation
+- Sometimes we have process variation(can have differnt delay or transition time)within a chip or from wafer to wafer or within the wafer. So STA need to take this into account.
+![Screenshot (2489)](https://user-images.githubusercontent.com/120498080/220419851-f8659c13-246d-432a-8564-11ef1a2baaa9.png)
+    
+### Clock Gating Checks 
+- A clock gating check occurs when a gating signal can control the path of a clock signal at a logic cell. For example when a clock and enable signal is fedded as input to an AND gate.
+- The signal must be used as clock downstream, like feed a flop or latch clock pin or feed output port or feed generated clock.
+- Intention of this check is that transition on gating pin does not Create unnecessary active edge of the clock in the fanout.
+
+![Screenshot (2490)](https://user-images.githubusercontent.com/120498080/220424817-99037fb4-c0bb-405d-b2e4-74bdf5905a5d.png)
+- So in case of AND and NAND gates clock gating checks that during setup check the enable should become stable sometime before the clock rising edge(so that coack has enough setup time) and during hold check the enable should become stable sometime after the clock rising edge
+    
+![Screenshot (2491)](https://user-images.githubusercontent.com/120498080/220424864-58615adc-4b19-4732-9ce3-e7a1642388a4.png)
+- So in case of OR or NOR gates clock gating checks that before some time and after some time of the low value of the clock enable pin should be stable.
+    
+Sometimes tools cannot set this clock gating checks and gives error, so we need to do it manually by suing this commands
+```
+   set_clock_gating_check
+```
+  
+### Checks on Async Pins
+- Async Pins in the designes are reset or clear pins 
+- These checks are needed only of asynchronous pins not for synchronous pins(beacure synchronous reset pins come from flops which is alraedy synchronised )
+    
+![Screenshot (2494)](https://user-images.githubusercontent.com/120498080/220427042-5de0431f-4639-4553-8c9f-7ea7a52b59aa.png)
+- Assertion means clear is on and outputs are zero, which is indepeant of clock
+- De-assertion means clear is off and output is dependent on input and clock.
+    
+![Screenshot (2495)](https://user-images.githubusercontent.com/120498080/220429740-d796001e-ca66-4ab3-8176-9d6c1b826108.png)
+![Screenshot (2496)](https://user-images.githubusercontent.com/120498080/220429770-7cfc8dbe-dcb9-4ea4-893c-9dca6d6d289e.png)
+    
+- Assertion to De-assertion change should not happen very close to clock edge, it should happen sometime before clock edge and sometime after clock edge which is known as the **Recovery Time** and this time requirement is given by the logival liblary of the flop 
+    
