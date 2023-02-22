@@ -322,13 +322,15 @@ A Typical SPEF File has 4 main sections
 
 ## Lab 5    
 ---
+    
 ###  Async Pin Checks
 - In lab5 we get into lab7 directory of our files.
+    
 #### Circuit Diagram
 ![3](https://user-images.githubusercontent.com/120498080/220600575-9bc64dfb-13f2-4187-8894-75363ab66275.jpeg)
 
 #### The `s27.v` file
-![29](https://user-images.githubusercontent.com/120498080/220595384-58523ae2-fc3c-4a3f-8234-db35045c043b.PNG)
+![29](https://user-images.githubusercontent.com/120498080/220601126-b818eaa2-815b-43db-9cf6-88f5207b028b.PNG)
 
 #### The `s27.sdc` file
 ![30](https://user-images.githubusercontent.com/120498080/220596150-a228adea-3f49-4221-98c3-dedad0f14cde.PNG)
