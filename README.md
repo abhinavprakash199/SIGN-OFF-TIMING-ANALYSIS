@@ -259,7 +259,7 @@ A Typical SPEF File has 4 main sections
     
 ### Exercise 3.1
 ---
-#### Change the number of paths being reported to 100 and analyze each path in detail and understand 
+#### Q1)Change the number of paths being reported to 100 and analyze each path in detail and understand 
 ```
     report_checks –from F1/CK -endpoint_count 100
 ```
