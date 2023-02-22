@@ -255,7 +255,7 @@ A Typical SPEF File has 4 main sections
 
 #### Generated timing report `run.log` file
 ![23](https://user-images.githubusercontent.com/120498080/220551100-b8b0b233-ac1c-4898-9dc5-cab0c282ac47.PNG)
-![24b](https://user-images.githubusercontent.com/120498080/220550702-dd93575c-16a0-42bf-bdc6-e61469219d90.png)
+![24b](https://user-images.githubusercontent.com/120498080/220551754-7721b75a-67ec-499e-bd1c-60c59eca3758.png)
     
 ### Exercise 3.1
 ---
