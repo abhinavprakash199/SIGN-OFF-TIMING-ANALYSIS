@@ -244,6 +244,19 @@ A Typical SPEF File has 4 main sections
 #### Generated `run.log` file
 ![20](https://user-images.githubusercontent.com/120498080/220539984-6b82ec4e-b168-4e08-96e6-106ba0bd508a.PNG)
 
+### Detailed Report
+- To get a detailed report consisting caps delay, net delays, slew rate input pins delays use this command.
+       
+```   
+  report_checks -path_delay min_max -fields {nets cap slew input_pins} -digits {4} 
+```
+#### The `run.tcl` script    
+![22](https://user-images.githubusercontent.com/120498080/220551222-a10ca626-417e-4728-aaa2-501ea8014794.PNG)
+
+#### Generated timing report `run.log` file
+![23](https://user-images.githubusercontent.com/120498080/220551100-b8b0b233-ac1c-4898-9dc5-cab0c282ac47.PNG)
+![24b](https://user-images.githubusercontent.com/120498080/220550702-dd93575c-16a0-42bf-bdc6-e61469219d90.png)
+    
 ### Exercise 3.1
 ---
 #### Change the number of paths being reported to 100 and analyze each path in detail and understand 
@@ -251,7 +264,7 @@ A Typical SPEF File has 4 main sections
     report_checks –from F1/CK -endpoint_count 100
 ```
 #### Changed `run.tcl` script     
-![21](https://user-images.githubusercontent.com/120498080/220547317-eaff60d1-80d8-423e-90d1-cd2f225b4bc9.PNG)
+![image](https://user-images.githubusercontent.com/120498080/220357030-340ed845-fddb-4ccd-833c-5eb337fc3e99.png)
  
 - Run STA with command    
 ```    
@@ -278,15 +291,19 @@ A Typical SPEF File has 4 main sections
     
     
     
-```   
-  report_checks -path_delay min_max -fields {nets cap slew input_pins} -digits {4} 
-```
-    
-    
-    
-    
-    
 
+    
+    
+    
+    
+    
+read_liberty -min simple_min.lib
+read_liberty -max simple_max.lib
+read_verilog simple.v
+link_design simple
+read_spef simple.spef
+read_sdc simple.sdc
+report_checks -from u1/a -group_count 5
     
     
     
