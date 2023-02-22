@@ -254,6 +254,7 @@ A Typical SPEF File has 4 main sections
 #### Generated `run.log` file
 ![20](https://user-images.githubusercontent.com/120498080/220539984-6b82ec4e-b168-4e08-96e6-106ba0bd508a.PNG)
 
+    
 ### Get Detailed Report
 - To get a detailed report consisting caps delay, net delays, slew rate input pins delays use this command.
        
@@ -293,14 +294,39 @@ A Typical SPEF File has 4 main sections
     
 ## Day 4
 ---
-### Clock Gating Checks
-
-
-
 [Day 4 Theory](https://github.com/abhinavprakash199/SIGN-OFF-TIMING-ANALYSIS/blob/main/THEORY.md#day-4)
     
 ## Lab 4    
 ---
+### Clock Gating Checks
+#### Circuit Diagram
+
+#### The `v27.v` file
+
+    
+#### The `run.tcl` script
+
+
+- Run STA with command
+```
+    sta run.tcl -exit | tee run.log
+```
+#### Generated `run.log` file
+
+    
+    
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 - [Reference from Lab 4](https://drive.google.com/file/d/18A2-AUr6HjYo7iSLXuEEQjyHcmYkpfdh/view?usp=sharing)
     
     
@@ -319,7 +345,6 @@ A Typical SPEF File has 4 main sections
 ## Day 5
 ---
 [Day 5 Theory](https://github.com/abhinavprakash199/SIGN-OFF-TIMING-ANALYSIS/blob/main/THEORY.md#day-5)   
-    
     
 ## Lab 5
 ---
