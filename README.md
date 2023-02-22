@@ -31,6 +31,8 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
         - [Async Pin Checks](#Async-Pin-Checks)
         
 * [Day 5](#day-5)   
+    + [Lab 6](#Lab-6)
+        - [Common Path Pessimism Removal(CPPR)](#Common-Path-Pessimism-Removal(CPPR))
     
 * [Appendix](#Appendix)
 * [References](#references)
@@ -350,18 +352,35 @@ A Typical SPEF File has 4 main sections
 #### Generated `run.log` file
 ![32](https://user-images.githubusercontent.com/120498080/220597638-9be5e870-785e-41cf-aadc-b39d93380e42.PNG)    
     
-- [Reference from Lab 4](https://drive.google.com/file/d/18A2-AUr6HjYo7iSLXuEEQjyHcmYkpfdh/view?usp=sharing)
+- [Reference from Lab 4 and 5](https://drive.google.com/file/d/18A2-AUr6HjYo7iSLXuEEQjyHcmYkpfdh/view?usp=sharing)
        
 ## Day 5
 ---
 [Day 5 Theory](https://github.com/abhinavprakash199/SIGN-OFF-TIMING-ANALYSIS/blob/main/THEORY.md#day-5)   
   
-## Lab 5
+## Lab 6
 ---
+### Common Path Pessimism Removal(CPPR)   
+- In lab6 we get into lab4 directory of our files.
     
+#### Circuit Diagram
+
+#### The `s27.v` file
+![34](https://user-images.githubusercontent.com/120498080/220632735-2f33f764-3e71-4652-ae3d-ff7575a43adc.PNG)
+
+#### The `s27.sdc` file
+![image](https://user-images.githubusercontent.com/120498080/220632982-987d63b3-7494-40a4-9c7a-bd9d4d9c3590.png)
+   
+#### The `run.tcl` script
+
     
+- Run STA with command
+```
+    sta run.tcl -exit | tee run.log
+```
+#### Generated `run.log` file    
     
-- [Reference from Lab 5](https://drive.google.com/file/d/1oaHP7CLQrpXiUlowJXuGKhF0kTbOAmht/view?usp=sharing)
+- [Reference from Lab 6 and 7](https://drive.google.com/file/d/1oaHP7CLQrpXiUlowJXuGKhF0kTbOAmht/view?usp=sharing)
 
     
     
