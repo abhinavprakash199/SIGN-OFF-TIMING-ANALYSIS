@@ -9,7 +9,9 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
 * [Day 1](#day-1)
     + [Lab 1](#Lab-1)
         - [OpenSTA](#OpenSTA)
+        - [Inputs to OpenSTA](#Inputs-to-OpenSTA)
         - [Constraints Creation](#Constraints-Creation)
+        - [The runScript](#The-runScript)
         - [Run OpenSTA](#Run-OpenSTA)
 * [Day 2](#day-2)
     + [Lab 2](#Lab-2)
@@ -19,6 +21,8 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
         - [Exercise 2.2](#Exercise-2.2)
 * [Day 3](#day-3)
     + [Lab 3](#Lab-3)
+        - [Understanding Slack Computation](#Understanding-Slack-Computation)
+        - [Get Detailed Report](#Get-Detailed-Report)
         - [Exercise 3.1](#Exercise-3.1)
 * [Day 4](#day-4)  
     + [Lab 4](#Lab-4)
@@ -50,7 +54,7 @@ OpenSTA is a gate level static timing verifier. As a stand-alone executable it c
     
 OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell, constraints as input and perform timing checks on the design.
 
-### Terminal
+#### Terminal
 ![image](https://user-images.githubusercontent.com/120498080/220437164-b14afedf-d730-4f1a-99e3-d6da9356ddc3.png)
 
 ### Inputs to OpenSTA
@@ -66,9 +70,9 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
 - Functionality of the cells
 - Input to Output relationship
  
-### Liberty Files
+#### Liberty Files
 ![image](https://user-images.githubusercontent.com/120498080/220438774-7871a7d4-54b2-4318-824b-c46847a242e1.png)
-### Input and Oputput of Liberty Files
+#### Input and Oputput of Liberty Files
 ![2](https://user-images.githubusercontent.com/120498080/220439330-5e8ad720-d945-4a0d-aa1e-f421dd609d63.PNG)
 
 3. Timing constraints(Provided in sdc format using `read_sdc` command)
@@ -96,11 +100,11 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
 - Which consists of the clock period, IO delays, Input transition and Capacitance Delays.
 ![3](https://user-images.githubusercontent.com/120498080/220440580-7594b0fd-8d62-4eb0-b848-852656bc266b.PNG)
 
-### runScript
+### The runScript
 - In runscript you can define all the commands you want to run in the openSTA tool
 - Tool will execute each command sequentially in order(There are some commands which are executed in parallel in some cases)
 - Runscript is in `.tcl` format.
-#### `run.tcl` script
+#### The `run.tcl` script
 ![4](https://user-images.githubusercontent.com/120498080/220449538-4531e191-1f9d-4488-b980-f3c45c4ca259.PNG)
 - `report_checks` command is used to report timing on the design.   
 ### Run OpenSTA
@@ -228,6 +232,8 @@ A Typical SPEF File has 4 main sections
     
 ### Lab 3
 ---
+### Understanding Slack Computation
+    
 #### Circuit Diagram
 ![Screenshot (2484)](https://user-images.githubusercontent.com/120498080/220355115-dacde325-1a7d-4f77-9962-16c9f2c98531.png)
 
@@ -244,7 +250,7 @@ A Typical SPEF File has 4 main sections
 #### Generated `run.log` file
 ![20](https://user-images.githubusercontent.com/120498080/220539984-6b82ec4e-b168-4e08-96e6-106ba0bd508a.PNG)
 
-### Detailed Report
+### Get Detailed Report
 - To get a detailed report consisting caps delay, net delays, slew rate input pins delays use this command.
        
 ```   
