@@ -16,14 +16,14 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
 * [Day 2](#day-2)
     + [Lab 2](#Lab-2)
         - [Liberty Files](#Liberty-Files)
-        - [Exercise 2.1](#Exercise-2.1)
+        - [Exercise 2_1](#Exercise-2_1)
         - [SPEF Files](#SPEF-Files)
-        - [Exercise 2.2](#Exercise-2.2)
+        - [Exercise 2_2](#Exercise-2_2)
 * [Day 3](#day-3)
     + [Lab 3](#Lab-3)
         - [Understanding Slack Computation](#Understanding-Slack-Computation)
         - [Get Detailed Report](#Get-Detailed-Report)
-        - [Exercise 3.1](#Exercise-3.1)
+        - [Exercise 3_1](#Exercise-3_1)
 * [Day 4](#day-4)  
     + [Lab 4](#Lab-4)
 * [Day 5](#day-5)   
@@ -139,7 +139,7 @@ The .lib file contains timing models and data to calcumax
 ![Screenshot (2442)](https://user-images.githubusercontent.com/120498080/220071960-0befd39b-4bb0-4bd5-9a0a-534e61e9d6a4.png)
 ![Screenshot (2443)](https://user-images.githubusercontent.com/120498080/220071978-5fbfbdc2-959c-499c-8622-eb17b4904b9f.png)
 ![Screenshot (2444)](https://user-images.githubusercontent.com/120498080/220072001-bb8e1afa-aa6d-4724-b86e-7581d4519391.png)
-### Exercise 2.1
+### Exercise 2_1
 ---
 #### Q1) Find all the cells in simple_max.lib
     
@@ -208,7 +208,7 @@ A Typical SPEF File has 4 main sections
 ```
     sta run.tcl -exit | tee run_2.log
 ```
-### Exercise 2.2
+### Exercise 2_2
 ---
 #### Q1) Understand other paths in `run.log`
 
@@ -263,7 +263,7 @@ A Typical SPEF File has 4 main sections
 ![23](https://user-images.githubusercontent.com/120498080/220551100-b8b0b233-ac1c-4898-9dc5-cab0c282ac47.PNG)
 ![24b](https://user-images.githubusercontent.com/120498080/220551754-7721b75a-67ec-499e-bd1c-60c59eca3758.png)
     
-### Exercise 3.1
+### Exercise 3_1
 ---
 #### Q1)Change the number of paths being reported to 100 and analyze each path in detail and understand 
 ```
