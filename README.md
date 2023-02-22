@@ -203,7 +203,7 @@ A Typical SPEF File has 4 main sections
 #### Standard cells or lib cells instantiations in `simple.v` file
 ![12](https://user-images.githubusercontent.com/120498080/220463786-c516a974-fb57-4786-8625-7b2f4040e406.PNG)
 ####  Circuit Diagram
-![WhatsApp Image 2023-02-22 at 10 37 47](https://user-images.githubusercontent.com/120498080/220531225-2dbba9cd-e381-415f-afa9-08e739024ec1.jpeg)
+![1](https://user-images.githubusercontent.com/120498080/220599640-1ba8e6ff-56e9-4d7f-b28a-e11ea04af495.jpeg)
 #### The `run.tcl` script
 ![13](https://user-images.githubusercontent.com/120498080/220525061-32e3237f-2807-45d3-b3e1-3115226bb5c1.PNG)
 
@@ -303,7 +303,7 @@ A Typical SPEF File has 4 main sections
 ### Clock Gating Checks
 - In lab4 we get into lab6 directory of our files.
 #### Circuit Diagram
-![WhatsApp Image 2023-02-22 at 15 08 12](https://user-images.githubusercontent.com/120498080/220581441-9c4c988d-c822-4cb4-aef0-628a54643170.jpeg)
+![2](https://user-images.githubusercontent.com/120498080/220600362-17ae47a9-7614-47c4-ac72-0a71c3ee8e4f.jpeg)
 
 #### The `s27.v` file
 ![25](https://user-images.githubusercontent.com/120498080/220574395-463a9cab-5f50-42a8-be48-eea25937bb71.PNG)
@@ -325,11 +325,14 @@ A Typical SPEF File has 4 main sections
 ###  Async Pin Checks
 - In lab5 we get into lab7 directory of our files.
 #### Circuit Diagram
+![3](https://user-images.githubusercontent.com/120498080/220600575-9bc64dfb-13f2-4187-8894-75363ab66275.jpeg)
 
 #### The `s27.v` file
+![29](https://user-images.githubusercontent.com/120498080/220595384-58523ae2-fc3c-4a3f-8234-db35045c043b.PNG)
 
 #### The `s27.sdc` file
-    
+![30](https://user-images.githubusercontent.com/120498080/220596150-a228adea-3f49-4221-98c3-dedad0f14cde.PNG)
+   
 #### The `run.tcl` script
     
 - Run STA with command
@@ -337,6 +340,7 @@ A Typical SPEF File has 4 main sections
     sta run.tcl -exit | tee run.log
 ```
 #### Generated `run.log` file
+![32](https://user-images.githubusercontent.com/120498080/220597638-9be5e870-785e-41cf-aadc-b39d93380e42.PNG)
 
     
     
