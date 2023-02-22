@@ -299,12 +299,18 @@ A Typical SPEF File has 4 main sections
 ## Lab 4    
 ---
 ### Clock Gating Checks
+- In lab4 we get into lab6 directory of our files.
 #### Circuit Diagram
+![WhatsApp Image 2023-02-22 at 15 08 12](https://user-images.githubusercontent.com/120498080/220581441-9c4c988d-c822-4cb4-aef0-628a54643170.jpeg)
 
-#### The `v27.v` file
+#### The `s27.v` file
+![25](https://user-images.githubusercontent.com/120498080/220574395-463a9cab-5f50-42a8-be48-eea25937bb71.PNG)
 
+#### The `s27.sdc` file
+![27](https://user-images.githubusercontent.com/120498080/220584924-b67798d6-d031-4787-8539-90cd336f4827.PNG)
     
 #### The `run.tcl` script
+![28](https://user-images.githubusercontent.com/120498080/220588592-5e79cd82-26b0-4a46-9a01-d69460147c51.PNG)
 
 
 - Run STA with command
@@ -358,6 +364,7 @@ A Typical SPEF File has 4 main sections
     
 ## References
 ---
+- [OpenSTA Manual](https://github.com/The-OpenROAD-Project/OpenSTA/blob/master/doc/OpenSTA.pdf)
 - https://www.synopsys.com/glossary/what-is-static-timing-analysis.html
 - https://github.com/Anmol-wq/VSD-IAT-Sign-off-Timing-Analysis---Basics-to-Advanced
 - [OpenSTA installation guide](https://github.com/The-OpenROAD-Project/OpenSTA)
