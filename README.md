@@ -152,6 +152,7 @@ To find no of cells in `simple_max file` use this command
     
 #### Q2) Find all the pins of the cell NAND2_X1 in `simple_max.lib`
 - It has 1 output and 2 input pins.
+    
 ![7](https://user-images.githubusercontent.com/120498080/220459325-b834ef64-db7c-42f2-90aa-cb4ba7700809.PNG)
 ![8](https://user-images.githubusercontent.com/120498080/220459355-661982c3-cf51-4314-9c96-b703e01224a3.PNG)
 
@@ -167,6 +168,7 @@ To find no of cells in `simple_max file` use this command
 - Variations in the fabrication process could could either increase or decrease the delay pf cells. Timing analysis must take into account the min and max values of delay in liberty files. These libraries will be used by the STA tool for analysis.
 - These respresent the table which are calculated based on several equations and tells about paramenter like have different slope of rise and fall time delay, etc.
 - It specify PVT variation in max and min conditions.
+    
 ![Screenshot (2448)](https://user-images.githubusercontent.com/120498080/220101858-5751278d-65e7-46b7-a543-5dd9ef201d4d.png)
   
 ### SPEF Files
@@ -208,12 +210,13 @@ A Typical SPEF File has 4 main sections
 
 #### The `run_1.log` script
 ![141](https://user-images.githubusercontent.com/120498080/220530607-a6f510b6-6cf2-4588-8c6d-de1cfd7929bd.PNG)
-
+- Its give from inp1 to f1 and not from inp1 to out because it gives the worst path.
 #### Q2) Increase number of paths reported and analyze those    
 - If we change group_count to 5
  
-![image](https://user-images.githubusercontent.com/120498080/220531837-5e177198-a6e8-4336-aa8a-92641c1d8c17.png)
+![17](https://user-images.githubusercontent.com/120498080/220538691-7284718e-6e5d-4381-a957-3eaacea1a9c2.PNG)
 - Then `run_3.log` script
+    
 ![15](https://user-images.githubusercontent.com/120498080/220536810-bd6dcd04-3610-4fd7-b682-57edfb027ca7.PNG)
 ![16](https://user-images.githubusercontent.com/120498080/220536852-6215d1c9-7943-49c9-a17e-1ecb091265d3.PNG)
 
@@ -225,21 +228,21 @@ A Typical SPEF File has 4 main sections
     
 ### Lab 3
 ---
-#### Circuit
+#### Circuit Diagram
 ![Screenshot (2484)](https://user-images.githubusercontent.com/120498080/220355115-dacde325-1a7d-4f77-9962-16c9f2c98531.png)
 
-#### `v27.v` file
-![image](https://user-images.githubusercontent.com/120498080/220355350-65fdf476-d4e4-4071-a605-342b91ac0e7e.png)
-  
-#### `run.tcl` script
-![image](https://user-images.githubusercontent.com/120498080/220355084-298ccc5e-019b-457c-bb93-d22d62a65df6.png)
+#### The `v27.v` file
+![18](https://user-images.githubusercontent.com/120498080/220538533-a7ca4d2e-9246-4a0c-b4ed-dd7c258574ba.PNG)
+    
+#### The `run.tcl` script
+![19](https://user-images.githubusercontent.com/120498080/220539313-83e82f0b-d60b-459e-8f96-d5ad8c728f7f.PNG)
 
 - Run STA with command
 ```
     sta run.tcl -exit | tee run.log
 ```
 #### Generated `run.log` file
-![image](https://user-images.githubusercontent.com/120498080/220355776-c4bc0104-0455-4cc0-a5df-c2c6f8692c16.png)
+![20](https://user-images.githubusercontent.com/120498080/220539984-6b82ec4e-b168-4e08-96e6-106ba0bd508a.PNG)
 
 ### Exercise 3.1
 ---
@@ -252,10 +255,12 @@ A Typical SPEF File has 4 main sections
  
 - Run STA with command    
 ```    
-    sta run.tcl -exit | tee out.txt    
+    sta run.tcl -exit | tee out_1.txt    
 ```  
-#### Generated `out.txt` file
-![image](https://user-images.githubusercontent.com/120498080/220357408-0edbd63c-b018-48f7-8451-af7a8cbb162b.png)
+#### Generated `out_1.txt` file
+![a1_page-0001](https://user-images.githubusercontent.com/120498080/220546665-f4d9f9a0-9c22-496d-a325-49edb75fa28b.jpg)
+![a1_page-0002](https://user-images.githubusercontent.com/120498080/220546689-b926b5f3-fc0a-4cc4-a5e2-289c35072077.jpg)
+
 - This will created the timing report of all the possible path combination and edge triggered with differnet combination.
 - Here are the few comparision reports of duffernet timing paths.
 ![Screenshot (2481)](https://user-images.githubusercontent.com/120498080/220358189-9332cf1d-f50a-4d73-85ab-617b74472f9b.png)
