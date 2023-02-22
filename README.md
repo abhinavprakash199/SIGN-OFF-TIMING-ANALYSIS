@@ -403,12 +403,16 @@ A Typical SPEF File has 4 main sections
 #### Circuit Diagram
 
 #### The `s27.v` file
-
-
+![39](https://user-images.githubusercontent.com/120498080/220647476-89772547-1eb9-415b-af47-c211bc5d5838.PNG)
+#### The `s27.v` file
+![42](https://user-images.githubusercontent.com/120498080/220650201-48027b3f-2c65-4643-b8ce-b6b9d9ed6b3a.PNG)
+![43](https://user-images.githubusercontent.com/120498080/220650263-71357c3e-ba87-499a-919f-64dd1ccd95a1.PNG)
+    
 #### The `s27.sdc` file
-
+![40](https://user-images.githubusercontent.com/120498080/220647805-e07e94a4-ecb9-463c-bfb1-5013e1c0bb78.PNG)
    
 #### The `run.tcl` script
+![41](https://user-images.githubusercontent.com/120498080/220648751-31fb0c36-f721-4676-95f0-0cc993cd1e87.PNG)
 
     
 - Run STA with command
