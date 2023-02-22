@@ -27,6 +27,8 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
 * [Day 4](#day-4)  
     + [Lab 4](#Lab-4)
         - [Clock Gating Checks](#Clock-Gating-Checks)
+    + [Lab 5](#Lab-5)
+        - [Async Pin Checks](#Async-Pin-Checks)
         
 * [Day 5](#day-5)   
     
@@ -308,17 +310,35 @@ A Typical SPEF File has 4 main sections
 
 #### The `s27.sdc` file
 ![27](https://user-images.githubusercontent.com/120498080/220584924-b67798d6-d031-4787-8539-90cd336f4827.PNG)
+#### The `run.tcl` script 
+![26](https://user-images.githubusercontent.com/120498080/220590784-97c0978a-423d-4a35-b590-9857934a62e4.PNG)
     
-#### The `run.tcl` script
+- Run STA with command
+```
+    sta run.tcl -exit | tee run.log
+```
+#### Generated `run.log` file
 ![28](https://user-images.githubusercontent.com/120498080/220588592-5e79cd82-26b0-4a46-9a01-d69460147c51.PNG)
 
+## Lab 5    
+---
+###  Async Pin Checks
+- In lab5 we get into lab7 directory of our files.
+#### Circuit Diagram
 
+#### The `s27.v` file
+
+#### The `s27.sdc` file
+    
+#### The `run.tcl` script
+    
 - Run STA with command
 ```
     sta run.tcl -exit | tee run.log
 ```
 #### Generated `run.log` file
 
+    
     
     
      
