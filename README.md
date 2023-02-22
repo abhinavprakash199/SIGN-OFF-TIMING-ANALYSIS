@@ -26,6 +26,8 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
         - [Exercise 3_1](#Exercise-3_1)
 * [Day 4](#day-4)  
     + [Lab 4](#Lab-4)
+        - [Clock Gating Checks](#Clock-Gating-Checks)
+        
 * [Day 5](#day-5)   
     
 * [Appendix](#Appendix)
@@ -291,6 +293,10 @@ A Typical SPEF File has 4 main sections
     
 ## Day 4
 ---
+### Clock Gating Checks
+
+
+
 [Day 4 Theory](https://github.com/abhinavprakash199/SIGN-OFF-TIMING-ANALYSIS/blob/main/THEORY.md#day-4)
     
 ## Lab 4    
