@@ -193,7 +193,7 @@ A Typical SPEF File has 4 main sections
 #### Standard cells or lib cells instantiations in `simple.v` file
 ![12](https://user-images.githubusercontent.com/120498080/220463786-c516a974-fb57-4786-8625-7b2f4040e406.PNG)
 #### `run.tcl` script
-![image](https://user-images.githubusercontent.com/120498080/220094332-4669744a-974e-44ef-9dc9-b4a64b5569e9.png)
+![13](https://user-images.githubusercontent.com/120498080/220525061-32e3237f-2807-45d3-b3e1-3115226bb5c1.PNG)
 
 ### Run OpenSTA
 • Run openSTA again using command 
@@ -204,13 +204,10 @@ A Typical SPEF File has 4 main sections
 ---
 #### Understand other paths in `run.log`
 - `report_checks` command is used to report timing on the design.
-#### `run.tcl` script
+#### `run.log` script
 ![image](https://user-images.githubusercontent.com/120498080/220098148-a37771fe-6d8e-4b26-a5c0-571fb9570287.png)
 
-    
-#### Understanding Timing Reports
-![Screenshot (2445)](https://user-images.githubusercontent.com/120498080/220099771-cb481c96-2e5d-4fd3-86c0-05d6facee4e9.png)
-
+### Increase number of paths reported and analyze those    
     
 - [Reference from Lab 2](https://drive.google.com/file/d/1A2SBqSQWAvsr65dGsNvp4cHjgwkc2uql/view?usp=sharing)
  
