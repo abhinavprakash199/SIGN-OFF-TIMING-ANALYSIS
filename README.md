@@ -192,22 +192,24 @@ A Typical SPEF File has 4 main sections
 ![11](https://user-images.githubusercontent.com/120498080/220463200-40ed044e-f79a-4f41-956a-f0a7a6d6cf7d.PNG)  
 #### Standard cells or lib cells instantiations in `simple.v` file
 ![12](https://user-images.githubusercontent.com/120498080/220463786-c516a974-fb57-4786-8625-7b2f4040e406.PNG)
+####  Circuit Diagram
+![WhatsApp Image 2023-02-22 at 10 37 47](https://user-images.githubusercontent.com/120498080/220527942-5ceafa48-66d0-4fa2-a908-016fb80c8337.jpeg)
 #### `run.tcl` script
 ![13](https://user-images.githubusercontent.com/120498080/220525061-32e3237f-2807-45d3-b3e1-3115226bb5c1.PNG)
 
 ### Run OpenSTA
 • Run openSTA again using command 
 ```
-    sta run.tcl -exit | tee run.log
+    sta run.tcl -exit | tee run_2.log
 ```
 ### Exercise 2.2
 ---
-#### Understand other paths in `run.log`
-- `report_checks` command is used to report timing on the design.
+#### Q1) Understand other paths in `run.log`
+
 #### `run.log` script
 ![image](https://user-images.githubusercontent.com/120498080/220098148-a37771fe-6d8e-4b26-a5c0-571fb9570287.png)
 
-### Increase number of paths reported and analyze those    
+### Q2) Increase number of paths reported and analyze those    
     
 - [Reference from Lab 2](https://drive.google.com/file/d/1A2SBqSQWAvsr65dGsNvp4cHjgwkc2uql/view?usp=sharing)
  
