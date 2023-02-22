@@ -316,7 +316,7 @@ A Typical SPEF File has 4 main sections
 #### The `s27.sdc` file
 ![27](https://user-images.githubusercontent.com/120498080/220584924-b67798d6-d031-4787-8539-90cd336f4827.PNG)
 #### The `run.tcl` script 
-![26](https://user-images.githubusercontent.com/120498080/220590784-97c0978a-423d-4a35-b590-9857934a62e4.PNG)
+![26](https://user-images.githubusercontent.com/120498080/220626643-8902ca37-b777-4eb2-9300-c21f272714a7.PNG)
     
 - Run STA with command
 ```
@@ -341,6 +341,7 @@ A Typical SPEF File has 4 main sections
 ![30](https://user-images.githubusercontent.com/120498080/220596150-a228adea-3f49-4221-98c3-dedad0f14cde.PNG)
    
 #### The `run.tcl` script
+![31_1](https://user-images.githubusercontent.com/120498080/220627425-35220c91-c704-4444-b53d-10a41ea7e2d8.PNG)
     
 - Run STA with command
 ```
