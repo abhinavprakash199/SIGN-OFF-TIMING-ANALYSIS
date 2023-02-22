@@ -32,8 +32,8 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
         
 * [Day 5](#day-5)   
     + [Lab 6](#Lab-6)
-        - [Common Path Pessimism Removal(CPPR) Disabled](#Common-Path-Pessimism-Removal(CPPR)-Disabled)
-        - [Common Path Pessimism Removal(CPPR) Enabled](#Common-Path-Pessimism-Removal(CPPR)-Enabled)
+        - [CPPR-Common Path Pessimism Removal Disabled](#CPPR-Common-Path-Pessimism-Removal-Disabled)
+        - [CPPR-Common Path Pessimism Removal Enabled](#CPPR-Common-Path-Pessimism-Removal-Enabled)
     +  [Lab 7](#Lab-7)
         - [ECO-Engineering Change Order](#ECO-Engineering-Change-Order)
     
@@ -362,7 +362,7 @@ A Typical SPEF File has 4 main sections
   
 ## Lab 6
 ---
-### Common Path Pessimism Removal(CPPR) Disabled  
+### CPPR-Common Path Pessimism Removal Disabled  
 - In lab6 we get into lab4 directory of our files.
     
 #### Circuit Diagram
@@ -385,7 +385,7 @@ A Typical SPEF File has 4 main sections
 ![36](https://user-images.githubusercontent.com/120498080/220639879-0138f222-8a5f-4096-9a34-a23681682455.PNG)
     
 
-### Common Path Pessimism Removal(CPPR) Enabled  
+### CPPR-Common Path Pessimism Removal Enabled  
 #### The `run.tcl` script 
 ![37](https://user-images.githubusercontent.com/120498080/220640360-1ed5fb30-a8f4-46a0-8a0a-28af733d454f.PNG)
    
