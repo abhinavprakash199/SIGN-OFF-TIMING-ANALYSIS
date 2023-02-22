@@ -301,17 +301,7 @@ A Typical SPEF File has 4 main sections
     
     
     
-    
-    
-read_liberty -min simple_min.lib
-read_liberty -max simple_max.lib
-read_verilog simple.v
-link_design simple
-read_spef simple.spef
-read_sdc simple.sdc
-report_checks -from u1/a -group_count 5
-    
-    
+      
     
     
     
