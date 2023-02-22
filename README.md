@@ -32,9 +32,11 @@ This repository contains the whole summary of hands on done by Abhinav Prakash (
         
 * [Day 5](#day-5)   
     + [Lab 6](#Lab-6)
-        - [Common Path Pessimism Removal(CPPR)](#Common-Path-Pessimism-Removal(CPPR))
+        - [Common Path Pessimism Removal(CPPR) Disabled](#Common-Path-Pessimism-Removal(CPPR)-Disabled)
+        - [Common Path Pessimism Removal(CPPR) Enabled](#Common-Path-Pessimism-Removal(CPPR)-Enabled)
+    +  [Lab 7](#Lab-7)
+        - [ECO-Engineering Change Order](#ECO-Engineering-Change-Order)
     
-* [Appendix](#Appendix)
 * [References](#references)
 * [Acknowledgement](#acknowledgement)
 * [Inquiries](#inquiries)
@@ -360,10 +362,11 @@ A Typical SPEF File has 4 main sections
   
 ## Lab 6
 ---
-### Common Path Pessimism Removal(CPPR)   
+### Common Path Pessimism Removal(CPPR) Disabled  
 - In lab6 we get into lab4 directory of our files.
     
 #### Circuit Diagram
+![Screenshot (2504)](https://user-images.githubusercontent.com/120498080/220634682-e086de80-50b5-4008-bf98-879d91e80daa.png)
 
 #### The `s27.v` file
 ![34](https://user-images.githubusercontent.com/120498080/220632735-2f33f764-3e71-4652-ae3d-ff7575a43adc.PNG)
@@ -372,21 +375,51 @@ A Typical SPEF File has 4 main sections
 ![image](https://user-images.githubusercontent.com/120498080/220632982-987d63b3-7494-40a4-9c7a-bd9d4d9c3590.png)
    
 #### The `run.tcl` script
+![35](https://user-images.githubusercontent.com/120498080/220637446-8dfb8262-d1a4-4c7a-810c-deb4f6b94d28.PNG)
+    
+- Run STA with command
+```
+    sta run.tcl -exit | tee cppr_disable.log
+```
+#### Generated `cppr_disable.log` file    
+![36](https://user-images.githubusercontent.com/120498080/220639879-0138f222-8a5f-4096-9a34-a23681682455.PNG)
+    
+
+### Common Path Pessimism Removal(CPPR) Enabled  
+#### The `run.tcl` script 
+![37](https://user-images.githubusercontent.com/120498080/220640360-1ed5fb30-a8f4-46a0-8a0a-28af733d454f.PNG)
+   
+```   
+    sta run.tcl -exit | tee cppr_enable.log
+```
+#### Generated `cppr_enable.log` file  
+![38](https://user-images.githubusercontent.com/120498080/220641588-637f1b4e-ef3a-459d-8fb7-510cf72fad7d.PNG)
+
+## Lab 7
+---
+### ECO-Engineering Change Order 
+- In lab7 we get into lab5 directory of our files.
+    
+#### Circuit Diagram
+
+#### The `s27.v` file
+
+
+#### The `s27.sdc` file
+
+   
+#### The `run.tcl` script
 
     
 - Run STA with command
 ```
     sta run.tcl -exit | tee run.log
 ```
-#### Generated `run.log` file    
+#### Generated `run.log` file 
+    
     
 - [Reference from Lab 6 and 7](https://drive.google.com/file/d/1oaHP7CLQrpXiUlowJXuGKhF0kTbOAmht/view?usp=sharing)
-
     
-    
-
-## Appendix
----
     
 ## References
 ---
