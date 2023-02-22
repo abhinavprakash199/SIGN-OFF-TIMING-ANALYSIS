@@ -112,7 +112,7 @@ OpenSTA is a Static Timing analysis (STA) tool that takes design, standard cell,
 ![image](https://user-images.githubusercontent.com/120498080/220450105-3c40f769-d74c-459b-bc6c-3879851e2ada.png)
     
 #### Output of run OpenSTA `run_1.log` file
-![5](https://user-images.githubusercontent.com/120498080/220454794-4a8422c0-27dd-47f4-b7c9-3503e1d0dda8.PNG)
+![5](https://user-images.githubusercontent.com/120498080/220532393-7d6b70cd-3912-4914-9dde-861adb32cfc4.PNG)
 ![6](https://user-images.githubusercontent.com/120498080/220460662-f89a6f4b-3ceb-409f-8106-42e3a564f07c.PNG)
 
 
@@ -188,13 +188,13 @@ A Typical SPEF File has 4 main sections
 3. Top Level Ports
 4. Parasitic description
 
-#### `simple.spef` file
+#### The `simple.spef` file
 ![11](https://user-images.githubusercontent.com/120498080/220463200-40ed044e-f79a-4f41-956a-f0a7a6d6cf7d.PNG)  
 #### Standard cells or lib cells instantiations in `simple.v` file
 ![12](https://user-images.githubusercontent.com/120498080/220463786-c516a974-fb57-4786-8625-7b2f4040e406.PNG)
 ####  Circuit Diagram
-![WhatsApp Image 2023-02-22 at 10 37 47](https://user-images.githubusercontent.com/120498080/220527942-5ceafa48-66d0-4fa2-a908-016fb80c8337.jpeg)
-#### `run.tcl` script
+![WhatsApp Image 2023-02-22 at 10 37 47](https://user-images.githubusercontent.com/120498080/220531225-2dbba9cd-e381-415f-afa9-08e739024ec1.jpeg)
+#### The `run.tcl` script
 ![13](https://user-images.githubusercontent.com/120498080/220525061-32e3237f-2807-45d3-b3e1-3115226bb5c1.PNG)
 
 ### Run OpenSTA
@@ -206,11 +206,17 @@ A Typical SPEF File has 4 main sections
 ---
 #### Q1) Understand other paths in `run.log`
 
-#### `run.log` script
-![image](https://user-images.githubusercontent.com/120498080/220098148-a37771fe-6d8e-4b26-a5c0-571fb9570287.png)
+#### The `run_1.log` script
+![141](https://user-images.githubusercontent.com/120498080/220530607-a6f510b6-6cf2-4588-8c6d-de1cfd7929bd.PNG)
 
-### Q2) Increase number of paths reported and analyze those    
-    
+#### Q2) Increase number of paths reported and analyze those    
+- If we change group_count to 5
+ 
+![image](https://user-images.githubusercontent.com/120498080/220531837-5e177198-a6e8-4336-aa8a-92641c1d8c17.png)
+- Then `run_3.log` script
+![15](https://user-images.githubusercontent.com/120498080/220536810-bd6dcd04-3610-4fd7-b682-57edfb027ca7.PNG)
+![16](https://user-images.githubusercontent.com/120498080/220536852-6215d1c9-7943-49c9-a17e-1ecb091265d3.PNG)
+
 - [Reference from Lab 2](https://drive.google.com/file/d/1A2SBqSQWAvsr65dGsNvp4cHjgwkc2uql/view?usp=sharing)
  
 ## Day 3
@@ -275,6 +281,13 @@ A Typical SPEF File has 4 main sections
     
     
     
+read_liberty -min simple_min.lib
+read_liberty -max simple_max.lib
+read_verilog simple.v
+link_design simple
+read_spef simple.spef
+read_sdc simple.sdc
+report_checks -from u1/a -group_count 5
     
     
     
