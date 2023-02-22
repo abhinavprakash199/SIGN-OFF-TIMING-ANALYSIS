@@ -215,6 +215,8 @@ A Typical SPEF File has 4 main sections
 #### The `run_1.log` script
 ![141](https://user-images.githubusercontent.com/120498080/220530607-a6f510b6-6cf2-4588-8c6d-de1cfd7929bd.PNG)
 - Its give from inp1 to f1 and not from inp1 to out because it gives the worst path.
+- Here there is no path between inp1 or inpt2 to out because **paths stop at sequential elements** and from that sequential elements other path starts further(here its from n3 to out)
+
 #### Q2) Increase number of paths reported and analyze those    
 - If we change group_count to 5
  
