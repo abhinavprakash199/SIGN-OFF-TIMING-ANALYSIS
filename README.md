@@ -190,7 +190,7 @@ To find no of cells in `simple_max file` use this command
 ```
 - In OpenSTA command to read spef files is 
 ```
-    raed_spef
+    read_spef
 ```    
 A Typical SPEF File has 4 main sections
 1. Header
@@ -204,6 +204,9 @@ A Typical SPEF File has 4 main sections
 ![12](https://user-images.githubusercontent.com/120498080/220463786-c516a974-fb57-4786-8625-7b2f4040e406.PNG)
 ####  Circuit Diagram
 ![1](https://user-images.githubusercontent.com/120498080/220599640-1ba8e6ff-56e9-4d7f-b28a-e11ea04af495.jpeg)
+#### The `simple.sdc` file
+![image](https://user-images.githubusercontent.com/120498080/220610927-d558373f-37f0-4e4c-8752-da6e901e8a9e.png)
+
 #### The `run.tcl` script
 ![13](https://user-images.githubusercontent.com/120498080/220525061-32e3237f-2807-45d3-b3e1-3115226bb5c1.PNG)
 
