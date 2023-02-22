@@ -264,7 +264,7 @@ A Typical SPEF File has 4 main sections
     report_checks –from F1/CK -endpoint_count 100
 ```
 #### Changed `run.tcl` script     
-![image](https://user-images.githubusercontent.com/120498080/220357030-340ed845-fddb-4ccd-833c-5eb337fc3e99.png)
+![21](https://user-images.githubusercontent.com/120498080/220553813-568de3fc-ea99-4f27-b4b0-7c2c262c3e8d.PNG)
  
 - Run STA with command    
 ```    
