@@ -251,7 +251,7 @@ A Typical SPEF File has 4 main sections
     report_checks –from F1/CK -endpoint_count 100
 ```
 #### Changed `run.tcl` script     
-![image](https://user-images.githubusercontent.com/120498080/220357030-340ed845-fddb-4ccd-833c-5eb337fc3e99.png)
+![21](https://user-images.githubusercontent.com/120498080/220547317-eaff60d1-80d8-423e-90d1-cd2f225b4bc9.PNG)
  
 - Run STA with command    
 ```    
@@ -286,13 +286,7 @@ A Typical SPEF File has 4 main sections
     
     
     
-read_liberty -min simple_min.lib
-read_liberty -max simple_max.lib
-read_verilog simple.v
-link_design simple
-read_spef simple.spef
-read_sdc simple.sdc
-report_checks -from u1/a -group_count 5
+
     
     
     
