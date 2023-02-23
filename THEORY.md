@@ -352,7 +352,10 @@ Sometimes its not necessary to meet timing in all the clocks so Clock Group comm
     
 #### Logically Exclusive Clock
 ![Screenshot (2508)](https://user-images.githubusercontent.com/120498080/220826409-aa70b1be-36f9-4c68-8024-073ae2a5c975.png)
-    
+#### Physically Exclusive Clock
+![Screenshot (2509)](https://user-images.githubusercontent.com/120498080/220830422-b746937a-b6d4-4822-ad0c-e9e3326119ba.png)
+- Then Logically Exclusive Clock means clocks can exist together just the selection is different where as Physically Exclusive Clock cannot be present together.
+- Physically Exclusive Clock do not have any crosstalk beacuse only one cloack is present at a time whereas Logically Exclusive Clock well have crosstalk
     
     
     
