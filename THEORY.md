@@ -340,9 +340,18 @@ Sometimes tools cannot set this clock gating checks and gives error, so we need 
 ## Day 5
 ---
 ### Clock Groups    
-
+Sometimes its not necessary to meet timing in all the clocks so Clock Group command use to tell STA tool between what clock it has to meet the timing requirement
     
+#### Synchronous Clocks
+![Screenshot (2506)](https://user-images.githubusercontent.com/120498080/220826325-ce0920f6-bbe6-4f33-b35b-96176f8515be.png)
+  
+#### Asynchronous Clocks
+![Screenshot (2507)](https://user-images.githubusercontent.com/120498080/220826349-013bf957-b008-433f-bd42-9ffc32f6a6e8.png) 
     
+- STA focuses only time paths Synchronous Clocks(it cannot do any analysis in Asynchronous Clocks). For Asynchronous Clocks there are other tools.
+    
+#### Logically Exclusive Clock
+![Screenshot (2508)](https://user-images.githubusercontent.com/120498080/220826409-aa70b1be-36f9-4c68-8024-073ae2a5c975.png)
     
     
     
