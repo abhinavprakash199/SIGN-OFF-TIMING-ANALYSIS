@@ -420,3 +420,9 @@ Sometimes its not necessary to meet timing in all the clocks so Clock Group comm
     
     
 ### Multiple Modes
+- It is used to define multiple modes in sdc.
+```
+    set_case_analysis
+```
+- This command is used to specify a certain portion of the design and specify a constant value that may or may not be the contant value in the netlist but we can overwrite this using this command. 
+
