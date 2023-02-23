@@ -356,16 +356,67 @@ Sometimes its not necessary to meet timing in all the clocks so Clock Group comm
 ![Screenshot (2509)](https://user-images.githubusercontent.com/120498080/220830422-b746937a-b6d4-4822-ad0c-e9e3326119ba.png)
 - Then Logically Exclusive Clock means clocks can exist together just the selection is different where as Physically Exclusive Clock cannot be present together.
 - Physically Exclusive Clock do not have any crosstalk beacuse only one cloack is present at a time whereas Logically Exclusive Clock well have crosstalk
+
+### Set Clock Groups    
+- By default STA assumes clocks to be synchronous, to change the clock to be asynchronous we use this commands.
+```
+    set_clock_group -asynchronous -group{clk1,ckl2,clk3} -group{clk4,ckl5,clk6} 
+```    
+![Screenshot (2510)](https://user-images.githubusercontent.com/120498080/220832054-153fffc1-772c-48b4-aefc-e8106fc9487b.png)
+- When only one group is specified then it means that group is ashnchronous to all the clock in the design.
+    
+![Screenshot (2511)](https://user-images.githubusercontent.com/120498080/220832473-2cd86adf-76b6-4b3f-8470-f87b9402f1ad.png)
+ 
+### Clock Properties    
+![Screenshot (2513)](https://user-images.githubusercontent.com/120498080/220832998-dc0d26cc-1072-4602-a908-36048c799b1d.png)
+
+
+### Path Specification 
+![Screenshot (2514)](https://user-images.githubusercontent.com/120498080/220834933-d78ef14f-e095-4b71-83d9-157cf82c22e0.png)
+
+- Path Specification is one of the format in sdc command which helps in changing the default path of our design, which can be changed by following commands 
+```
+   -from        //used for startpoints which are generally ports or clock pins of the flops
+   -to          //used for endpoints    
+   -through     //used for nets or nodes which are between the path from startpoint to endpoint
+```
+- Using above command we can specify one or more math to which we want to change the default behaviour.  
+- For example
+```
+   -from F1/CK -through U1/A -through U1/Z -to F5/D 
+```    
+### Timing Exceptions Commands
+- Most of thr timing checks are done from one cycle of between every pair of flop time but this can be modifief by Timing Exceptions command in STA      
+#### set_false_path commands
+- Tells STA tool to don't time these paths.
+ ![Screenshot (2515)](https://user-images.githubusercontent.com/120498080/220836277-c70f5c27-22dd-4f04-9653-68c045ce3f8c.png)
+```
+    set_false_path -from{F1/CK F2/CK} -to{F4/D F5/D}
+```    
+- This will have no timing paths stanrting from F1/CK or F2/CK to F4/D or F5/D
+#### set_multicycle_path command
+- This is used to change the default behaviour(which is one cycle)
+    
+![Screenshot (2516)](https://user-images.githubusercontent.com/120498080/220837613-18206131-d3b7-4a3a-b84f-eaaa14c33289.png)
+
+```
+    set_multicycle_path -setup2 -from FF1 to FF2
+```    
+- Here FF1 to FF2 will take 2 cycle of clock to meet the setup timing constarins.    
+    
+- Hence modification of setup check also modifies the hold check because of the 2 rules of hold check(we studied before)
+    
+![Screenshot (2517)](https://user-images.githubusercontent.com/120498080/220838551-855b22e5-f996-47ec-a29c-1b9e816f22ba.png)
+    
+- Do don't modofy hold check we need to use following commands 
+ ```
+    set_multicycle_path -hold2 -from FF1 to FF2
+```    
+![Screenshot (2518)](https://user-images.githubusercontent.com/120498080/220838653-7f47f03f-707f-492a-bbcd-86736e5899d2.png)
+    
+#### Other Exceptions Commands    
+![Screenshot (2519)](https://user-images.githubusercontent.com/120498080/220838940-5b7480f0-e4ab-4be6-8d33-58eb6dfa3e91.png)
+- The `set_disable_timing` is used to cells to dissable certain archs whereas `set_false_path` is used to say dont meet timing on these paths, bit `set_false_path` command is more roboust because it can be used for specific paths.
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+### Multiple Modes
