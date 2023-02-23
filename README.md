@@ -406,7 +406,8 @@ A Typical SPEF File has 4 main sections
 - In lab7 we get into lab5 directory of our files.
     
 #### Circuit Diagram
-
+![Screenshot (2504)](https://user-images.githubusercontent.com/120498080/220634682-e086de80-50b5-4008-bf98-879d91e80daa.png)
+    
 #### The `s27.v` file
 ![39](https://user-images.githubusercontent.com/120498080/220647476-89772547-1eb9-415b-af47-c211bc5d5838.PNG)
 #### The `s27.v` file
