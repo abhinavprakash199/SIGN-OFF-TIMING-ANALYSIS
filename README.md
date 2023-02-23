@@ -402,7 +402,7 @@ A Typical SPEF File has 4 main sections
 - There are specialized signoff tools that help us to analyze the issue and also suggest the changes we need to do in order to close the issue. 
 - The suggested change is captured in an eco file.
 - In this lab we will focus on ECO for timing purposes, this is done to fix setup and hold violation
-
+- [ECO Theory](https://www.vlsisystemdesign.com/the-beauty-of-slack-based-timing-eco/)
 - In lab7 we get into lab5 directory of our files.
     
 #### Circuit Diagram
