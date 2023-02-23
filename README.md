@@ -398,6 +398,11 @@ A Typical SPEF File has 4 main sections
 ## Lab 7
 ---
 ### ECO-Engineering Change Order 
+- In the ECO cycle, we perform various analysis one by one for every check which we need to close but not closed till PnR stage. 
+- There are specialized signoff tools that help us to analyze the issue and also suggest the changes we need to do in order to close the issue. 
+- The suggested change is captured in an eco file.
+- In this lab we will focus on ECO for timing purposes, this is done to fix setup and hold violation
+
 - In lab7 we get into lab5 directory of our files.
     
 #### Circuit Diagram
@@ -420,8 +425,20 @@ A Typical SPEF File has 4 main sections
     sta run.tcl -exit | tee run.log
 ```
 #### Generated `run.log` file 
-    
-    
+- Timing report with max delay on our original design.
+
+![44](https://user-images.githubusercontent.com/120498080/220953506-689dc4c0-ef85-4e52-8312-f7b8beb3bbc5.PNG)
+-Timing report with min delay on our original design. 
+
+![45](https://user-images.githubusercontent.com/120498080/220953815-ffbe1d4f-5f0f-4bd1-9dd7-4e815ea9cea1.PNG)
+- Timing report with max delay on the eco design.
+
+![46](https://user-images.githubusercontent.com/120498080/220954423-ea36b524-d0d4-4e98-a201-eda0f80b38be.PNG)
+- Timing report with min delay on the eco design.
+
+![47](https://user-images.githubusercontent.com/120498080/220954621-36e0a8b6-c05c-447a-81c9-c17c01dc988b.PNG)
+
+
 - [Reference from Lab 6 and 7](https://drive.google.com/file/d/1oaHP7CLQrpXiUlowJXuGKhF0kTbOAmht/view?usp=sharing)
     
     
