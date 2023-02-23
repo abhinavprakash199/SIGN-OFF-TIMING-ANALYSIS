@@ -32,6 +32,11 @@
 
 * [Day 5](#day-5)  
     + [Clock Groups](#Clock-Groups)
+    + [Set Clock Groups](#Set-Clock-Groups)
+    + [Clock Properties](#Clock-Properties)
+    + [Path Specification](#Path-Specification)
+    + [Timing Exceptions Commands](#Timing-Exceptions-Commands)
+    + [Multiple Modes](#Multiple-Modes)
 
 ## Day 1
 ---
